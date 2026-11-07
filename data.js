@@ -40,7 +40,7 @@ var P = [
       s:'Dokumentasi Praktikum', 
       c:'Sistem Digital', 
       k:'Google Drive', 
-      img:'Sistem Digital.png',
+      img:'Proyek/Sistem Digital.png',
       d:'Mengimplementasikan cara kerja dari bermacam-macam gerbang logika dengan Decoder dan Encoder',
       l:[['Google Drive','https://drive.google.com/file/d/1CeRb-HbjCBvEv0oFfq2O6peWsMQSXubM/view?usp=drive_link']]
    },
@@ -49,7 +49,7 @@ var P = [
       s:'Aplikasi Dekstop', 
       c:'Pemrograman Bahasa Java', 
       k:'GitHub', 
-      img:'Steam Kendaraan.png',
+      img:'Proyek/Steam Kendaraan.png',
       d:'Proyek Steam Kendaraan menggunakan netbeans dan pembuatan ui scene builder serta terintegrasi dengan database MySQL dengan bahasa Java',
       l:[['GitHub', 'https://github.com/Danlions/SteamKendaraan']]},
   {t:'Sampah Pintar', s:'Sensor dan Sistem Tertanam', c:'Sistem Tertanam', k:'Drive', img:'',
