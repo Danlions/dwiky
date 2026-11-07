@@ -17,9 +17,15 @@ var SITE = {
 
 var GH = 'https://github.com/Danlions';
 var P = [
-  {t:'Aplikasi BMR BMI', s:'Terminal App', c:'Pemrograman', k:'GitHub', img:'',
-    d:'Aplikasi Gizi Yang Menghitung BMR dan BMI Berbasis Terminal.',
-    l:[['Lihat di GitHub', 'https://github.com/Danlions/Aplikasi_BMR_BMI']},
+   {
+       t: 'Aplikasi BMR BMI', 
+       s: 'Terminal App', 
+       c: 'Pemrograman Bahasa C', 
+       k: 'GitHub', 
+       img: 'Proyek/Aplikasi BMR BMI.png',
+       d: 'Aplikasi Gizi Yang Menghitung BMR dan BMI Berbasis Terminal.',
+       l: [['Lihat di GitHub', 'https://github.com/Danlions/Aplikasi_BMR_BMI']]
+   },
   {t:'Kinematika', s:'Arm Manipulator', c:'Robotika', k:'Drive', img:'',
     d:'Proyek arm manipulator pada mata kuliah Kinematika.',
     l:[['Buka dokumen','https://drive.google.com/file/d/1MEtLrvR1LaxXN938QOIou0OQD-8u5Hrh/view?usp=drivesdk']]},
