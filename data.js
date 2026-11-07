@@ -6,16 +6,16 @@
 
 /* ============ IDENTITAS & KONTAK ============ */
 var SITE = {
-  name:  '[Nama Kamu]',
-  email: 'email@contoh.com',
+  name:  'Dwiky Jerryan Koryanto Muhammad',
+  email: 'dwikyjerryan311@gmail.com',
   soc: [
-    ['GitHub',    'https://github.com/username'],
-    ['LinkedIn',  'https://linkedin.com/in/username'],
-    ['Instagram', 'https://instagram.com/username']
+    ['GitHub',    'https://github.com/Danlions'],
+    ['LinkedIn',  'www.linkedin.com/in/dwiky-jerryan-koryanto-muhammad'],
+    ['Instagram', 'https://instagram.com/kazikvy']
   ]
 };
 
-var GH = 'https://github.com/username';
+var GH = 'https://github.com/Danlions';
 var P = [
   {t:'Alpro', s:'Terminal App', c:'Pemrograman', k:'GitHub', img:'',
     d:'Aplikasi berbasis terminal untuk mata kuliah Alpro.',
