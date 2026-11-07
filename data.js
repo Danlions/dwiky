@@ -30,7 +30,7 @@ var P = [
       t:'Arm Manipulator', 
       s:'Prototype', 
       c:'Hidrolik', 
-      k:'Drive', 
+      k:'Google Drive', 
       img:'Proyek/Arm Manipulator.png',
       d:'Proyek Membuat Arm Manipulator Yang Bergerak dengan Cara Kerja Hidrolik.',
       l:[['Drive','https://drive.google.com/file/d/1UguEo3sYAD_Tot8RvDvcMIK8npNTgNe_/view?usp=drive_link']]
