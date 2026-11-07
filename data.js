@@ -29,7 +29,7 @@ var P = [
    {
       t:'Arm Manipulator', 
       s:'Prototype', 
-      c:'Pemanfaatan Hidrolik', 
+      c:'Hidrolik', 
       k:'Drive', 
       img:'Proyek/Arm Manipulator.png',
       d:'Proyek Membuat Arm Manipulator Yang Bergerak dengan Cara Kerja Hidrolik.',
