@@ -19,8 +19,31 @@ var ICONS = {
   vscode: '<svg viewBox="0 0 24 24"><path fill="#0A7CCF" fill-rule="evenodd" d="M17.5 2.5 21.5 4.4V19.6L17.5 21.5 9.3 13.8 5.2 16.9 3.5 16V8L5.2 7.1 9.3 10.2ZM17.5 7.2 11.8 12 17.5 16.8Z"/></svg>'
 };
 
+/* ============ PEMERIKSA DATA ============
+   Kalau data.js rusak (ada bagian yang terhapus / salah tulis), pesan merah muncul di bawah layar
+   dan bagian lain halaman tetap jalan. */
+function showProblem(msg){
+  var b = document.getElementById('problem');
+  if (!b){
+    b = document.createElement('div'); b.id = 'problem';
+    b.style.cssText = 'position:fixed;left:12px;right:12px;bottom:12px;z-index:999;max-height:40vh;overflow:auto;padding:12px 16px;border-radius:10px;background:#3A1218;border:1px solid #FF6B7A;color:#FFD9DD;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre-wrap';
+    b.innerHTML = '<b>Ada masalah di file situs ini:</b>\n'; document.body.appendChild(b);
+  }
+  b.appendChild(document.createTextNode('• ' + msg + '\n'));
+}
+window.addEventListener('error', function(e){
+  var f = (e.filename || '').split('/').pop();
+  showProblem(e.message + (f ? '  (' + f + ' baris ' + e.lineno + ')' : ''));
+});
+['SITE','P','SKILLS','CERTS','INFO'].forEach(function(n){
+  if (typeof window[n] === 'undefined'){
+    showProblem('Variabel "' + n + '" tidak ditemukan di data.js. Kemungkinan terhapus saat menyalin.');
+    window[n] = (n === 'SITE') ? {name:'[Nama]', email:'', soc:[], certDir:'Sertifikat/'} : [];
+  }
+});
+
 /* ============ KERANGKA HALAMAN (navigasi, kontak, footer) ============ */
-(function(){
+try { (function(){
   var page = document.body.getAttribute('data-page') || '', title = document.body.getAttribute('data-title');
   var clean = SITE.name.replace(/[\[\]]/g, '').trim(), words = clean.split(/\s+/);
   if (title) document.title = title + ' | ' + SITE.name;
@@ -44,10 +67,10 @@ var ICONS = {
     ['skill.html', SKILLS.length, 'Skill', 'Bahasa, perangkat, dan software yang saya pakai.'],
     ['sertifikat.html', CERTS.length, 'Sertifikat', 'Kursus, workshop, dan kepanitiaan.']
   ].map(function(t){ return '<a class="tz" href="' + t[0] + '"><span class="n">' + two(t[1]) + '</span><b>' + t[2] + '</b><span>' + t[3] + '</span><em>Buka halaman →</em></a>'; }).join('');
-})();
+})(); } catch (e) { showProblem('kerangka halaman: ' + e.message); }
 
 /* ============ PROYEK ============ */
-if ($('grid')) {
+if ($('grid')) { try {
   $('cnt').textContent = two(P.length) + ' proyek';
   $('grid').innerHTML = P.map(function(p, i){
     var th = p.img ? '<div class="th" style="--img:url(\'' + esc(p.img) + '\')"></div>' : '<div class="th no" data-n="' + two(i + 1) + '"></div>';
@@ -73,19 +96,19 @@ if ($('grid')) {
   dlg.addEventListener('click', function(e){ if (e.target === dlg) dlg.close(); });
   dlg.addEventListener('close', function(){ document.body.classList.remove('lock'); });
 
-}
+} catch (e) { showProblem('proyek: ' + e.message); } }
 
 /* ============ SKILL ============ */
-if ($('skills')) {
+if ($('skills')) { try {
   $('skills').innerHTML = SKILLS.map(function(s){
     var inner = ICONS[s.i] || esc(s.m || s.n.slice(0, 2));
     return '<div class="skill"><span class="ic">' + inner + '</span><div><b>' + esc(s.n) + '</b><span>' + esc(s.d) + '</span></div></div>';
   }).join('');
 
-}
+} catch (e) { showProblem('skill: ' + e.message); } }
 
 /* ============ SERTIFIKAT ============ */
-if ($('certs')) {
+if ($('certs')) { try {
   var IMG_RE = /\.(jpe?g|png|webp|gif)$/i, PDF_RE = /\.pdf$/i;
   /* f = nama file di folder SITE.certDir (PDF atau gambar). u = link lain (opsional, mis. verifikasi online). */
   function certFile(c){ return c.f ? (SITE.certDir || '') + encodeURI(c.f) : (c.g || ''); }
@@ -136,19 +159,19 @@ if ($('certs')) {
     lb.addEventListener('click', function(e){ if (e.target === lb || e.target.className === 'lx') close(); });
     document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
   })();
-}
+} catch (e) { showProblem('sertifikat: ' + e.message); } }
 
 /* ============ KOORDINAT KURSOR ============ */
-if ($('xy')) {
+if ($('xy')) { try {
   var xy = $('xy');
   window.addEventListener('pointermove', function(e){
     xy.textContent = 'X ' + String(Math.round(e.clientX)).padStart(4, '0') + '  Y ' + String(Math.round(e.clientY)).padStart(4, '0');
   }, {passive:true});
 
-}
+} catch (e) { showProblem('koordinat: ' + e.message); } }
 
 /* ============ DEMO ROBOT DOBOT (beranda) ============ */
-if ($('sc')) {
+if ($('sc')) { try {
   (function(){
     var NS = 'http://www.w3.org/2000/svg', sc = $('sc');
     var TOOL = 26, HOME = [320, 124];
@@ -294,7 +317,7 @@ if ($('sc')) {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) showFinal(); else start();
   })();
 
-}
+} catch (e) { showProblem('demo Dobot: ' + e.message); } }
 
 /* ============ EFEK CAHAYA KURSOR ============ */
 (function(){
