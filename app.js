@@ -111,7 +111,13 @@ if ($('skills')) { try {
 if ($('certs')) { try {
   var IMG_RE = /\.(jpe?g|png|webp|gif)$/i, PDF_RE = /\.pdf$/i;
   /* f = nama file di folder SITE.certDir (PDF atau gambar). u = link lain (opsional, mis. verifikasi online). */
-  function certFile(c){ return c.f ? (SITE.certDir || '') + encodeURI(c.f) : (c.g || ''); }
+  function certFile(c){
+    if (!c.f) return c.g || '';
+    var dir = (SITE.certDir === undefined) ? 'Sertifikat/' : SITE.certDir;   /* otomatis 'Sertifikat/' bila tidak ditulis di data.js */
+    var f = c.f.replace(/^\/+/, '');
+    if (dir && f.toLowerCase().indexOf(dir.toLowerCase()) !== 0) f = dir + f;
+    return encodeURI(f);
+  }
   var certGroup = 'Semua';
   function drawCerts(){
     var names = ['Semua'];
@@ -198,20 +204,49 @@ if ($('sc')) { try {
     /* Daftar tersembunyi untuk pembaca layar */
     $('info').innerHTML = INFO.map(function(r){ return '<dt>' + esc(r.l) + '</dt><dd>' + esc(r.v.join(' ')) + '</dd>'; }).join('');
 
-    /* Papan tulis: label dan isi dibuat sebagai teks yang "terbuka" oleh klip */
+    /* Papan tulis: label dan isi dibuat sebagai teks yang "terbuka" oleh klip.
+       Teks yang terlalu panjang otomatis dipecah jadi maksimal 2 baris, lalu dikecilkan bila masih tidak muat. */
     var board = $('board'), pieces = [];
-    INFO.forEach(function(r, c){
-      var cx = BX + (c % 3) * CW + 12, cy = BY + Math.floor(c / 3) * CH;
-      var items = [[r.l, 'lab', cy + 20, 7]].concat(r.v.map(function(v, i){ return [v, 'val', cy + 43 + i * 20, 8]; }));
-      items.forEach(function(it, j){
-        var id = 'cp' + pieces.length;
-        var cp = el('clipPath', {id:id}, $('df'));
-        var rc = el('rect', {x:cx - 3, y:it[2] - 22, width:0, height:30}, cp);
-        var t = el('text', {x:cx, y:it[2], 'clip-path':'url(#' + id + ')'}, board);
-        t.setAttribute('class', it[1]); t.textContent = it[0];
-        pieces.push({cell:c, first:j === 0, txt:it[0], t:t, rc:rc, x:cx, y:it[2], line:it[3], w:60});
+    var MAXW = CW - 22;
+    var probe = el('text', {x:0, y:-60, visibility:'hidden'}, sc); probe.setAttribute('class', 'val');
+    function textW(s, size){
+      probe.style.fontSize = size + 'px'; probe.textContent = s;
+      try { return probe.getComputedTextLength(); } catch (e) { return s.length * size * .45; }
+    }
+    function fitValue(lines){
+      var joined = lines.join(' ');
+      for (var size = 19; size >= 10; size--){
+        if (lines.length <= 2 && lines.every(function(l){ return textW(l, size) <= MAXW; })) return {size:size, lines:lines};
+        var words = joined.split(/\s+/), out = [], cur = '', ok = true;
+        for (var k = 0; k < words.length; k++){
+          var t = cur ? cur + ' ' + words[k] : words[k];
+          if (textW(t, size) <= MAXW) cur = t;
+          else { if (!cur) { ok = false; break; } out.push(cur); cur = words[k]; if (textW(cur, size) > MAXW) { ok = false; break; } }
+        }
+        if (!ok) continue;
+        out.push(cur);
+        if (out.length <= 2) return {size:size, lines:out};
+      }
+      return {size:10, lines:[joined]};
+    }
+    function build(){
+      [].slice.call($('df').querySelectorAll('clipPath')).forEach(function(n){ n.parentNode.removeChild(n); });
+      board.innerHTML = ''; pieces.length = 0;
+      INFO.forEach(function(r, c){
+        var cx = BX + (c % 3) * CW + 12, cy = BY + Math.floor(c / 3) * CH;
+        var fv = fitValue(r.v);
+        var items = [[r.l, 'lab', cy + 20, 7, 9]].concat(fv.lines.map(function(v, i){ return [v, 'val', cy + 24 + fv.size + i * (fv.size + 1), 8, fv.size]; }));
+        items.forEach(function(it, j){
+          var id = 'cp' + pieces.length;
+          var cp = el('clipPath', {id:id}, $('df'));
+          var rc = el('rect', {x:cx - 3, y:it[2] - it[4] - 3, width:0, height:it[4] + 12}, cp);
+          var t = el('text', {x:cx, y:it[2], 'clip-path':'url(#' + id + ')'}, board);
+          t.setAttribute('class', it[1]); if (it[1] === 'val') t.style.fontSize = it[4] + 'px'; t.textContent = it[0];
+          pieces.push({cell:c, first:j === 0, txt:it[0], t:t, rc:rc, x:cx, y:it[2], line:it[3], w:60});
+        });
       });
-    });
+    }
+    build();
     function measure(){ pieces.forEach(function(p){ try { p.w = Math.ceil(p.t.getComputedTextLength()) + 4; } catch (e) {} }); }
 
     var cur = HOME.slice();
@@ -277,7 +312,7 @@ if ($('sc')) { try {
     async function actWrite(my){
       reset(); setCode();
       if (document.fonts && document.fonts.ready) { try { await document.fonts.ready; } catch (e) {} }
-      measure();
+      build(); measure();
       await wait(500, my);
       for (var i = 0; i < pieces.length; i++){
         var p = pieces[i], cy = p.y - 5;
@@ -306,7 +341,9 @@ if ($('sc')) { try {
     }
     function showFinal(){
       run++; reset(); setCode();
-      measure(); pieces.forEach(function(p){ p.rc.setAttribute('width', p.w + 6); });
+      function fill(){ build(); measure(); pieces.forEach(function(p){ p.rc.setAttribute('width', p.w + 6); }); }
+      fill();
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(fill);
       hl(10);
       log('Profil selesai ditulis. Tekan tombol di atas untuk melihat animasinya.');
     }
