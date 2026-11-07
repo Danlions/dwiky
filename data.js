@@ -18,13 +18,13 @@ var SITE = {
 var GH = 'https://github.com/Danlions';
 var P = [
    {
-      t: 'Aplikasi BMR BMI', 
-      s: 'Terminal Aplication', 
-      c: 'Pemrograman Bahasa C', 
-      k: 'GitHub', 
-      img: 'Proyek/Aplikasi BMR BMI.png',
-      d: 'Aplikasi Gizi Yang Menghitung BMR dan BMI Berbasis Terminal dengan Bahasa C.',
-      l: [['GitHub', 'https://github.com/Danlions/Aplikasi_BMR_BMI']]
+      t:'Aplikasi BMR BMI', 
+      s:'Terminal Aplication', 
+      c:'Pemrograman Bahasa C', 
+      k:'GitHub', 
+      img:'Proyek/Aplikasi BMR BMI.png',
+      d:'Aplikasi Gizi Yang Menghitung BMR dan BMI Berbasis Terminal dengan Bahasa C.',
+      l:[['GitHub', 'https://github.com/Danlions/Aplikasi_BMR_BMI']]
    },
    {
       t:'Arm Manipulator', 
