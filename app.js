@@ -86,6 +86,9 @@ if ($('skills')) {
 
 /* ============ SERTIFIKAT ============ */
 if ($('certs')) {
+  var IMG_RE = /\.(jpe?g|png|webp|gif)$/i, PDF_RE = /\.pdf$/i;
+  /* f = nama file di folder SITE.certDir (PDF atau gambar). u = link lain (opsional, mis. verifikasi online). */
+  function certFile(c){ return c.f ? (SITE.certDir || '') + encodeURI(c.f) : (c.g || ''); }
   var certGroup = 'Semua';
   function drawCerts(){
     var names = ['Semua'];
@@ -96,10 +99,12 @@ if ($('certs')) {
     }).join('');
     $('certs').innerHTML = CERTS.map(function(c, i){
       if (certGroup !== 'Semua' && c.k !== certGroup) return '';
-      var th = c.g ? '<span class="th"><img src="' + esc(c.g) + '" alt="Sertifikat ' + esc(c.t) + '" loading="lazy"></span>' : '';
-      var link = c.u || c.g, tag = link ? 'a' : 'div';
-      var note = c.g ? ' | Lihat sertifikat' : (c.u ? ' | Lihat kredensial' : '');
-      return '<' + tag + ' class="cert" data-i="' + i + '"' + (link ? ' href="' + esc(link) + '"' : '') + '>' + th + '<b>' + esc(c.t) + '</b><span>' + esc(c.s) + '</span><em>' + esc(c.y) + note + '</em></' + tag + '>';
+      var f = certFile(c), isImg = IMG_RE.test(f), isPdf = PDF_RE.test(f);
+      var th = isImg ? '<span class="th"><img src="' + esc(f) + '" alt="Sertifikat ' + esc(c.t) + '" loading="lazy"></span>'
+             : (isPdf ? '<span class="th pdf"><b>PDF</b></span>' : '');
+      var link = f || c.u, tag = link ? 'a' : 'div';
+      var note = f ? ' | Lihat sertifikat' : (c.u ? ' | Lihat kredensial' : '');
+      return '<' + tag + ' class="cert" data-i="' + i + '"' + (link ? ' href="' + esc(link) + '" target="_blank" rel="noopener"' : '') + '>' + th + '<b>' + esc(c.t) + '</b><span>' + esc(c.s) + '</span><em>' + esc(c.y) + note + '</em></' + tag + '>';
     }).join('');
   }
   $('filt').addEventListener('click', function(e){
@@ -108,21 +113,29 @@ if ($('certs')) {
   });
   drawCerts();
 
-  /* Klik kartu yang punya gambar: buka pembesaran (klik di mana saja / Esc untuk menutup) */
+  /* Pembesaran: gambar atau PDF tampil di atas halaman. Klik latar / tombol X / Esc untuk menutup.
+     Di layar kecil PDF dibuka di tab baru karena browser HP tidak menampilkan PDF di dalam halaman. */
   (function(){
-    var lb = document.createElement('div'); lb.className = 'lb'; lb.innerHTML = '<img alt=""><a target="_blank" rel="noopener">Buka di tab baru</a>';
+    var lb = document.createElement('div'); lb.className = 'lb';
+    lb.innerHTML = '<button type="button" class="lx" aria-label="Tutup">×</button><img alt=""><iframe title="Sertifikat" hidden></iframe><a target="_blank" rel="noopener">Buka di tab baru</a>';
     document.body.appendChild(lb);
-    var im = lb.querySelector('img'), ln = lb.querySelector('a');
-    function close(){ lb.classList.remove('on'); }
+    var im = lb.querySelector('img'), fr = lb.querySelector('iframe'), ln = lb.querySelector('a');
+    function close(){ lb.classList.remove('on'); fr.removeAttribute('src'); }
     $('certs').addEventListener('click', function(e){
       var a = e.target.closest('.cert'); if (!a) return;
-      var c = CERTS[+a.getAttribute('data-i')]; if (!c || !c.g) return;
-      e.preventDefault(); im.src = c.g; ln.href = c.u || c.g; ln.style.display = c.u ? '' : 'none'; lb.classList.add('on');
+      var c = CERTS[+a.getAttribute('data-i')]; if (!c) return;
+      var f = certFile(c); if (!f) return;
+      var isImg = IMG_RE.test(f), isPdf = PDF_RE.test(f);
+      if (isPdf && window.innerWidth < 800) return;          /* HP: biarkan terbuka di tab baru */
+      if (!isImg && !isPdf) return;
+      e.preventDefault();
+      im.hidden = !isImg; fr.hidden = !isPdf;
+      if (isImg) im.src = f; else fr.src = f + '#toolbar=0&navpanes=0';
+      ln.href = f; lb.classList.add('on');
     });
-    lb.addEventListener('click', function(e){ if (e.target.tagName !== 'A') close(); });
+    lb.addEventListener('click', function(e){ if (e.target === lb || e.target.className === 'lx') close(); });
     document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
   })();
-
 }
 
 /* ============ KOORDINAT KURSOR ============ */

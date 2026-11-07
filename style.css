@@ -197,3 +197,11 @@ dialog::backdrop{background:rgba(3,5,9,.8)}
 .tz span{color:var(--muted);font-size:15px}
 .tz em{font:500 12px var(--mono);font-style:normal;color:var(--accent);margin-top:12px;letter-spacing:.08em}
 @media (max-width:720px){.tzs{grid-template-columns:1fr}}
+
+/* Pratinjau sertifikat PDF / gambar */
+.cert .th.pdf{aspect-ratio:4/2.2;background:linear-gradient(135deg,#1B212B,#12161D)}
+.cert .th.pdf b{font:700 1.3rem var(--mono);letter-spacing:.2em;color:var(--accent);border:1.5px solid var(--accent);padding:6px 14px;border-radius:6px;margin:0}
+.lb iframe{width:min(960px,100%);height:86vh;border:0;border-radius:8px;background:#fff;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.lb iframe[hidden],.lb img[hidden]{display:none}
+.lb .lx{position:absolute;top:14px;right:18px;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(20,24,32,.8);color:#fff;font-size:26px;line-height:1;cursor:pointer}
+.lb .lx:hover{border-color:var(--accent)}
