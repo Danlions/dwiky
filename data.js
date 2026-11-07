@@ -19,7 +19,7 @@ var GH = 'https://github.com/Danlions';
 var P = [
    {
       t:'Aplikasi BMR BMI', 
-      s:'Terminal Aplication', 
+      s:'Aplikasi Terminal', 
       c:'Pemrograman Bahasa C', 
       k:'GitHub', 
       img:'Proyek/Aplikasi BMR BMI.png',
@@ -28,7 +28,7 @@ var P = [
    },
    {
       t:'Arm Manipulator', 
-      s:'Prototype', 
+      s:'Prototipe', 
       c:'Hidrolik', 
       k:'Google Drive', 
       img:'Proyek/Arm Manipulator.png',
@@ -39,14 +39,19 @@ var P = [
       t:'Gerbang Logika', 
       s:'Dokumentasi Praktikum', 
       c:'Sistem Digital', 
-      k:'Drive', 
-      img:'',
+      k:'Google Drive', 
+      img:'Sistem Digital.png',
       d:'Mengimplementasikan cara kerja dari bermacam-macam gerbang logika dengan Decoder dan Encoder',
       l:[['Google Drive','https://drive.google.com/file/d/1CeRb-HbjCBvEv0oFfq2O6peWsMQSXubM/view?usp=drive_link']]
    },
-  {t:'Steam Kendaraan', s:'Promlan + MIBD', c:'Pemrograman', k:'GitHub', img:'',
-    d:'Proyek Steam Kendaraan yang dikerjakan untuk mata kuliah Promlan dan MIBD.',
-    l:[['Lihat di GitHub', GH]]},
+   {
+      t:'Steam Kendaraan', 
+      s:'Aplikasi Dekstop', 
+      c:'Pemrograman Bahasa Java', 
+      k:'GitHub', 
+      img:'Steam Kendaraan.png',
+      d:'Proyek Steam Kendaraan menggunakan netbeans dan pembuatan ui scene builder serta terintegrasi dengan database MySQL dengan bahasa Java',
+      l:[['GitHub', 'https://github.com/Danlions/SteamKendaraan']]},
   {t:'Sampah Pintar', s:'Sensor dan Sistem Tertanam', c:'Sistem Tertanam', k:'Drive', img:'',
     d:'Proyek tempat sampah pintar untuk mata kuliah Sensor dan Sistem Tertanam.',
     l:[['Buka folder Drive','https://drive.google.com/drive/folders/1YKI4mJZ0up3s3vZdyULtHhqchN5yO9KA']]},
