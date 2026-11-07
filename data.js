@@ -15,32 +15,42 @@ var SITE = {
   ]
 };
 
-var GH = 'https://github.com/Danlions';
-var P = [
-  {t:'Alpro', s:'Terminal App', c:'Pemrograman', k:'GitHub', img:'',
-    d:'Aplikasi berbasis terminal untuk mata kuliah Alpro.',
-    l:[['Lihat di GitHub', GH]]},
-  {t:'Kinematika', s:'Arm Manipulator', c:'Robotika', k:'Drive', img:'',
-    d:'Proyek arm manipulator pada mata kuliah Kinematika.',
-    l:[['Buka dokumen','https://drive.google.com/file/d/1MEtLrvR1LaxXN938QOIou0OQD-8u5Hrh/view?usp=drivesdk']]},
-  {t:'Sisdig', s:'Dokumentasi Praktikum', c:'Dokumentasi', k:'Drive', img:'',
-    d:'Kumpulan dokumentasi praktikum Sistem Digital.',
-    l:[['Buka folder Drive','https://drive.google.com/drive/folders/1e7geEjVoufC7uqvQzOLAEBt7qHkQfktK?usp=drive_link']]},
-  {t:'Steam Kendaraan', s:'Promlan + MIBD', c:'Pemrograman', k:'GitHub', img:'',
-    d:'Proyek Steam Kendaraan yang dikerjakan untuk mata kuliah Promlan dan MIBD.',
-    l:[['Lihat di GitHub', GH]]},
-  {t:'Sampah Pintar', s:'Sensor dan Sistem Tertanam', c:'Sistem Tertanam', k:'Drive', img:'',
-    d:'Proyek tempat sampah pintar untuk mata kuliah Sensor dan Sistem Tertanam.',
-    l:[['Buka folder Drive','https://drive.google.com/drive/folders/1YKI4mJZ0up3s3vZdyULtHhqchN5yO9KA']]},
-  {t:'Starpoin System', s:'Desain Interaksi', c:'Desain', k:'Figma + Drive', img:'',
-    d:'Perancangan antarmuka Starpoin System pada mata kuliah Desain Interaksi, dengan desain di Figma dan dokumentasi di Drive.',
-    l:[['Lihat desain Figma','https://www.figma.com/design/ksEbT7dhCwe58sz4lYnQcZ/Untitled?node-id=0-1&p=f'],['Buka folder Drive','https://drive.google.com/drive/folders/10xT1rNW3KkGhcnhw82qRS4fmC0-fWH_c']]},
-  {t:'IoT Simulasi', s:'Wokwi + Firebase', c:'IoT', k:'GitHub', img:'',
-    d:'Simulasi IoT di Wokwi yang terintegrasi dengan Firebase.',
-    l:[['Lihat di GitHub', GH]]},
-  {t:'Robotika Dobot', s:'Program dan Logika', c:'Robotika', k:'GitHub', img:'',
-    d:'Program dan logika untuk menggerakkan robot Dobot.',
-    l:[['Lihat di GitHub', GH]]}
+var CERTS = [
+  /* ---------- Cognitive Class AI ---------- */
+  {k:'Cognitive Class AI', t:'A Quick Introduction to Machine Learning', s:'Cognitive Class (IBM)', y:'2026', f:'Cognitive Class Ai/A Quick Introduction to Machine Learning.pdf'},
+  {k:'Cognitive Class AI', t:'Classification Methods: Problems and Solutions', s:'Cognitive Class (IBM)', y:'2026', f:'Cognitive Class Ai/Classification Methods Problems and Solutions.pdf'}, 
+  {k:'Cognitive Class AI', t:'Customer Clustering with KMeans', s:'Cognitive Class (IBM)', y:'2026', f:'Cognitive Class Ai/Customer Clustering with KMeans to Boost Business Strategy.pdf'},
+  {k:'Cognitive Class AI', t:'Data Analysis with Python', s:'Cognitive Class (IBM)', y:'2026', f:'Cognitive Class Ai/Data Analysis with Python.pdf'},
+  {k:'Cognitive Class AI', t:'Learning with Python', s:'Cognitive Class (IBM)', y:'2026', f:'Cognitive Class Ai/Learning with Python.pdf'},
+  {k:'Cognitive Class AI', t:'Machine Learning Basics', s:'Cognitive Class (IBM)', y:'2026', f:'Cognitive Class Ai/Machine Learning Basics.pdf'},
+  {k:'Cognitive Class AI', t:'Precise Predictions: Classification for Flowers', s:'Cognitive Class (IBM)', y:'2026', f:'Cognitive Class Ai/Precise Predictions Classification for Flower and Tumors.pdf'}, 
+  {k:'Cognitive Class AI', t:'Predictions: Regression for Car Mileage', s:'Cognitive Class (IBM)', y:'2026', f:'Cognitive Class Ai/Predictions Regression for Car Mileage and Diamond Price.pdf'}, 
+  {k:'Cognitive Class AI', t:'Python 101 for Data Science', s:'Cognitive Class (IBM)', y:'2026', f:'Cognitive Class Ai/Python 101 for Data Science.pdf'},
+  {k:'Cognitive Class AI', t:'SQL and Relational Databases 101', s:'Cognitive Class (IBM)', y:'2025', f:'Cognitive Class Ai/SQL and Relational Databases 101.pdf'},
+
+  /* ---------- IBM SkillsBuild ---------- */
+  {k:'IBM SkillsBuild', t:'AI Introduction', s:'IBM SkillsBuild', y:'2025', f:'IBM Skills Build/AI Introduction_Completion Certificate_SkillsBuild.pdf'}, 
+  {k:'IBM SkillsBuild', t:'IBM SkillsBuild Completion Certificate', s:'IBM SkillsBuild', y:'2025', f:'IBM Skills Build/Completion Certificate _ SkillsBuild.pdf'},
+  {k:'IBM SkillsBuild', t:'Getting Started with AI', s:'IBM SkillsBuild', y:'2025', f:'IBM Skills Build/Getting Started Ai_Completion Certificate_SkillsBuild.pdf'}, 
+  {k:'IBM SkillsBuild', t:'IBM Granite Models', s:'IBM SkillsBuild', y:'2025', f:'IBM Skills Build/IBM Granite Models_SkillsBuild.pdf'},
+  {k:'IBM SkillsBuild', t:'IBM Granite', s:'IBM SkillsBuild', y:'2025', f:'IBM Skills Build/IBM Granite_Completion Certificate _ SkillsBuild.pdf'}, 
+  {k:'IBM SkillsBuild', t:'IBM Design', s:'IBM SkillsBuild / Credly', y:'2025', f:'IBM Skills Build/IBMDesign_Credly.pdf'},
+  {k:'IBM SkillsBuild', t:'Code Generation and Optimization', s:'IBM SkillsBuild', y:'2025', f:'IBM Skills Build/Sertifikat Code Generation and Optimization - Wave 3.pdf'}, 
+  {k:'IBM SkillsBuild', t:'Use Generative AI', s:'IBM SkillsBuild', y:'2025', f:'IBM Skills Build/Use Generative AI_SkillsBuild.pdf'},
+
+  /* ---------- Panitia ---------- */
+  {k:'Panitia', t:'Isola Sport Fest', s:'Panitia', y:'2025', f:'Panitia/Isola Sport Fest.pdf'},
+  {k:'Panitia', t:'Metastro 2025', s:'Panitia', y:'2025', f:'Panitia/Metastro 2025.pdf'},
+  {k:'Panitia', t:'Trisula Suaka', s:'Panitia', y:'2025', f:'Panitia/Trisula Suaka.pdf'},
+
+  /* ---------- Workshop ---------- */
+  {k:'Workshop', t:'AI Class ASEAN', s:'Asean Foundation', y:'2026', f:'Workshop/Ai_Class_Assean.pdf'},
+  {k:'Workshop', t:'Alibaba', s:'Alibaba', y:'2025', f:'Workshop/Alibaba.pdf'},
+  {k:'Workshop', t:'TOEFL Prediction Test', s:'Central Course', y:'2026', f:'Dwiky Jerryan Koryanto Muhammad-sshj.pdf'},
+  {k:'Workshop', t:'PPSDM', s:'PPSDM', y:'2025', f:'Workshop/Sert - PPSDM - Dwiky Jerryan Koryanto Muhammad.pdf'},
+  {k:'Workshop', t:'SIC6 Stage 1', s:'Samsung Inovation Campus', y:'2024-2025', f:'Workshop/Sertifikat SIC6 Stage 1.pdf'},
+  {k:'Workshop', t:'TOEFL ITP Workshop', s:'Arfiyan Ridwan', y:'2025', f:'Workshop/TOEFL ITP Workshop by Arfiyan Ridwan.pdf'},
+  {k:'Workshop', t:'Workshop Matematika', s:'Fakultas Sains dan Matematika Universitas Dipenogoro', y:'2025', f:'Workshop/Workshop Matematika.pdf'}
 ];
 
 /* ============ SKILL SOFTWARE ============
