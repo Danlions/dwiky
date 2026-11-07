@@ -15,6 +15,34 @@ var SITE = {
   ]
 };
 
+var GH = 'https://github.com/Danlions';
+var P = [
+  {t:'Alpro', s:'Terminal App', c:'Pemrograman', k:'GitHub', img:'',
+    d:'Aplikasi berbasis terminal untuk mata kuliah Alpro.',
+    l:[['Lihat di GitHub', GH]]},
+  {t:'Kinematika', s:'Arm Manipulator', c:'Robotika', k:'Drive', img:'',
+    d:'Proyek arm manipulator pada mata kuliah Kinematika.',
+    l:[['Buka dokumen','https://drive.google.com/file/d/1MEtLrvR1LaxXN938QOIou0OQD-8u5Hrh/view?usp=drivesdk']]},
+  {t:'Sisdig', s:'Dokumentasi Praktikum', c:'Dokumentasi', k:'Drive', img:'',
+    d:'Kumpulan dokumentasi praktikum Sistem Digital.',
+    l:[['Buka folder Drive','https://drive.google.com/drive/folders/1e7geEjVoufC7uqvQzOLAEBt7qHkQfktK?usp=drive_link']]},
+  {t:'Steam Kendaraan', s:'Promlan + MIBD', c:'Pemrograman', k:'GitHub', img:'',
+    d:'Proyek Steam Kendaraan yang dikerjakan untuk mata kuliah Promlan dan MIBD.',
+    l:[['Lihat di GitHub', GH]]},
+  {t:'Sampah Pintar', s:'Sensor dan Sistem Tertanam', c:'Sistem Tertanam', k:'Drive', img:'',
+    d:'Proyek tempat sampah pintar untuk mata kuliah Sensor dan Sistem Tertanam.',
+    l:[['Buka folder Drive','https://drive.google.com/drive/folders/1YKI4mJZ0up3s3vZdyULtHhqchN5yO9KA']]},
+  {t:'Starpoin System', s:'Desain Interaksi', c:'Desain', k:'Figma + Drive', img:'',
+    d:'Perancangan antarmuka Starpoin System pada mata kuliah Desain Interaksi, dengan desain di Figma dan dokumentasi di Drive.',
+    l:[['Lihat desain Figma','https://www.figma.com/design/ksEbT7dhCwe58sz4lYnQcZ/Untitled?node-id=0-1&p=f'],['Buka folder Drive','https://drive.google.com/drive/folders/10xT1rNW3KkGhcnhw82qRS4fmC0-fWH_c']]},
+  {t:'IoT Simulasi', s:'Wokwi + Firebase', c:'IoT', k:'GitHub', img:'',
+    d:'Simulasi IoT di Wokwi yang terintegrasi dengan Firebase.',
+    l:[['Lihat di GitHub', GH]]},
+  {t:'Robotika Dobot', s:'Program dan Logika', c:'Robotika', k:'GitHub', img:'',
+    d:'Program dan logika untuk menggerakkan robot Dobot.',
+    l:[['Lihat di GitHub', GH]]}
+];
+
 /* ============ SKILL SOFTWARE ============
    n = nama, d = keterangan singkat, i = nama ikon dari daftar ICONS di atas
    (python, cplusplus, arduino, wokwi, firebase, figma, git, vscode).
