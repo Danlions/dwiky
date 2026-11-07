@@ -23,7 +23,7 @@ var P = [
       c:'Pemrograman Bahasa C', 
       k:'GitHub', 
       img:'Proyek/Aplikasi BMR BMI.png',
-      d:'Aplikasi Gizi Yang Menghitung BMR dan BMI Berbasis Terminal dengan Bahasa C.',
+      d:'Aplikasi Gizi yang menghitung BMR dan BMI berbasis terminal dengan bahasa C.',
       l:[['GitHub', 'https://github.com/Danlions/Aplikasi_BMR_BMI']]
    },
    {
@@ -32,12 +32,17 @@ var P = [
       c:'Hidrolik', 
       k:'Google Drive', 
       img:'Proyek/Arm Manipulator.png',
-      d:'Proyek Membuat Arm Manipulator Yang Bergerak dengan Cara Kerja Hidrolik.',
+      d:'Proyek membuat Arm Manipulator yang bergerak dengan cara kerja hidrolik.',
       l:[['Drive','https://drive.google.com/file/d/1UguEo3sYAD_Tot8RvDvcMIK8npNTgNe_/view?usp=drive_link']]
    },
-  {t:'Sisdig', s:'Dokumentasi Praktikum', c:'Dokumentasi', k:'Drive', img:'',
-    d:'Kumpulan dokumentasi praktikum Sistem Digital.',
-    l:[['Buka folder Drive','https://drive.google.com/drive/folders/1e7geEjVoufC7uqvQzOLAEBt7qHkQfktK?usp=drive_link']]},
+   {t:'Implementasi Gerbang Logika', 
+    s:'Dokumentasi Praktikum', 
+    c:'Sistem Digital', 
+    k:'Drive', 
+    img:'',
+    d:'Mengimplementasikan cara kerja dari bermacam-macam gerbang logika dengan Decoder dan Encoder',
+    l:[['https://drive.google.com/file/d/1CeRb-HbjCBvEv0oFfq2O6peWsMQSXubM/view?usp=drive_link']]
+   },
   {t:'Steam Kendaraan', s:'Promlan + MIBD', c:'Pemrograman', k:'GitHub', img:'',
     d:'Proyek Steam Kendaraan yang dikerjakan untuk mata kuliah Promlan dan MIBD.',
     l:[['Lihat di GitHub', GH]]},
