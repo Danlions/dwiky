@@ -106,7 +106,7 @@ var INFO = [
   {l:'NAMA', v:[SITE.name]},
   {l:'PROGRAM STUDI', v:['Mekatronika & Kecerdasan Buatan']},
   {l:'KAMPUS', v:['Universitas Pendidikan Indonesia']},
-  {l:'SEMESTER', v:['5']},
+  {l:'SEMESTER', v:['5 (Lima)']},
   {l:'FOKUS', v:['Robotika, IoT,','Desain interaksi, Editting']},
   {l:'KOTA', v:['Bogor']}
 ];
