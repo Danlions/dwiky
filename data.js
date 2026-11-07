@@ -10,7 +10,7 @@ var SITE = {
   email: 'dwikyjerryan311@gmail.com',
   soc: [
     ['GitHub',    'https://github.com/Danlions'],
-    ['LinkedIn',  'www.linkedin.com/in/dwiky-jerryan-koryanto-muhammad'],
+    ['LinkedIn',  'https://www.linkedin.com/in/dwiky-jerryan-koryanto-muhammad/'],
     ['Instagram', 'https://instagram.com/kazikvy']
   ]
 };
