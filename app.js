@@ -111,10 +111,13 @@ if ($('skills')) { try {
 if ($('certs')) { try {
   var IMG_RE = /\.(jpe?g|png|webp|gif)$/i, PDF_RE = /\.pdf$/i;
   /* f = nama file di folder SITE.certDir (PDF atau gambar). u = link lain (opsional, mis. verifikasi online). */
+  /* Nama kelompok (k) -> nama folder di GitHub, hanya untuk yang namanya berbeda. Bisa ditimpa lewat SITE.folders di data.js */
+  var FOLDERS = {'Cognitive Class AI':'Cognitive Class Ai', 'IBM SkillsBuild':'IBM Skills Build'};
   function certFile(c){
     if (!c.f) return c.g || '';
     var dir = (SITE.certDir === undefined) ? 'Sertifikat/' : SITE.certDir;   /* otomatis 'Sertifikat/' bila tidak ditulis di data.js */
     var f = c.f.replace(/^\/+/, '');
+    if (f.indexOf('/') < 0 && c.k) f = ((SITE.folders && SITE.folders[c.k]) || FOLDERS[c.k] || c.k) + '/' + f;   /* nama file saja -> folder diisi otomatis */
     if (dir && f.toLowerCase().indexOf(dir.toLowerCase()) !== 0) f = dir + f;
     return encodeURI(f);
   }
@@ -180,8 +183,8 @@ if ($('xy')) { try {
 if ($('sc')) { try {
   (function(){
     var NS = 'http://www.w3.org/2000/svg', sc = $('sc');
-    var TOOL = 26, HOME = [320, 124];
-    var BX = 90, BY = 154, CW = 460 / 3, CH = 73;
+    var TOOL = 26, HOME = [320, 92];
+    var BX = 24, BY = 124, CW = 592 / 3, CH = 88;
     var K = function(t){ return '<span class="k">' + t + '</span>'; }, S = function(t){ return '<span class="s">"' + t + '"</span>'; }, C = function(t){ return '<span class="c">' + t + '</span>'; };
     var CODE = [
       C('# Dobot: tulis ringkasan profil di papan'),
@@ -215,7 +218,7 @@ if ($('sc')) { try {
     }
     function fitValue(lines){
       var joined = lines.join(' ');
-      for (var size = 19; size >= 10; size--){
+      for (var size = 24; size >= 11; size--){
         if (lines.length <= 2 && lines.every(function(l){ return textW(l, size) <= MAXW; })) return {size:size, lines:lines};
         var words = joined.split(/\s+/), out = [], cur = '', ok = true;
         for (var k = 0; k < words.length; k++){
@@ -235,7 +238,7 @@ if ($('sc')) { try {
       INFO.forEach(function(r, c){
         var cx = BX + (c % 3) * CW + 12, cy = BY + Math.floor(c / 3) * CH;
         var fv = fitValue(r.v);
-        var items = [[r.l, 'lab', cy + 20, 7, 9]].concat(fv.lines.map(function(v, i){ return [v, 'val', cy + 24 + fv.size + i * (fv.size + 1), 8, fv.size]; }));
+        var items = [[r.l, 'lab', cy + 23, 7, 11]].concat(fv.lines.map(function(v, i){ return [v, 'val', cy + 26 + fv.size + i * (fv.size + 2), 8, fv.size]; }));
         items.forEach(function(it, j){
           var id = 'cp' + pieces.length;
           var cp = el('clipPath', {id:id}, $('df'));
@@ -266,7 +269,7 @@ if ($('sc')) { try {
       seg('a' + k + 'k', x1 + (x2 - x1) * .22, y1 + (y2 - y1) * .22, x1 + (x2 - x1) * .78, y1 + (y2 - y1) * .78);
     }
     function render(){
-      var sx = Math.max(66, Math.min(574, cur[0] - 140));
+      var sx = Math.max(66, Math.min(574, cur[0] - 155));
       $('bd').setAttribute('transform', 'translate(' + sx + ',0)');
       var e = elbow(sx, cur[0], cur[1]);
       link(1, sx, SY, e[0], e[1]); link(2, e[0], e[1], cur[0], cur[1]);

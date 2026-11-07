@@ -93,8 +93,8 @@ button.b{background:none;color:inherit;cursor:pointer}
 .sr{position:absolute;width:1px;height:1px;margin:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .acts{display:flex;gap:8px;flex-wrap:wrap}
 .acts .b{padding:8px 16px;font-size:14px}
-.lab{font:500 9px var(--mono);letter-spacing:.12em;fill:#2F6BFF}
-.val{font:700 19px "Caveat",cursive;fill:#12307F}
+.lab{font:500 11px var(--mono);letter-spacing:.12em;fill:#2F6BFF}
+.val{font:700 24px "Caveat",cursive;fill:#12307F}
 .demo{margin-bottom:80px}
 @media (max-width:900px){.demo{grid-template-columns:1fr}}
 
