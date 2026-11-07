@@ -97,7 +97,6 @@ var CERTS = [
   {k:'Workshop', t:'TOEFL Prediction Test', s:'Central Course', y:'2026', f:'Dwiky Jerryan Koryanto Muhammad-sshj.pdf'},
   {k:'Workshop', t:'PPSDM', s:'PPSDM', y:'2025', f:'Workshop/Sert - PPSDM - Dwiky Jerryan Koryanto Muhammad.pdf'},
   {k:'Workshop', t:'SIC6 Stage 1', s:'Samsung Inovation Campus', y:'2024-2025', f:'Workshop/Sertifikat SIC6 Stage 1.pdf'},
-  {k:'Workshop', t:'TOEFL ITP Workshop', s:'Arfiyan Ridwan', y:'2025', f:'Workshop/TOEFL ITP Workshop by Arfiyan Ridwan.pdf'},
   {k:'Workshop', t:'Workshop Matematika', s:'Fakultas Sains dan Matematika Universitas Dipenogoro', y:'2025', f:'Workshop/Workshop Matematika.pdf'}
 ];
 
