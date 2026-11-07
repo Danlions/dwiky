@@ -59,9 +59,10 @@ var SKILLS = [
 ];
 
 /* Sertifikat: ganti isi, tambah atau hapus sesuai kebutuhan */
-/* k = kelompok (sesuai nama folder), t = judul, s = penerbit, y = tahun,
-   g = gambar (opsional, mis. 'sertifikat/iot.jpg'), u = link/PDF/verifikasi (opsional).
-   Tanpa g dan u, kartu tampil sebagai teks saja. */
+/* k = kelompok, t = judul, s = penerbit, y = tahun
+   f = NAMA FILE di folder Sertifikat (PDF atau JPG/PNG), mis. f:'python-101.pdf'
+   u = link lain (opsional), mis. link verifikasi online
+   Tanpa f dan u, kartu tampil sebagai teks saja. */
 var CERTS = [
   {k:'Cognitive Class AI', t:'A Quick Introduction to Machine Learning', s:'Cognitive Class (IBM)', y:'2026'},
   {k:'Cognitive Class AI', t:'Classification Methods: Problems and Solutions', s:'Cognitive Class (IBM)', y:'2026'},
