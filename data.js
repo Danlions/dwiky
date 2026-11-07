@@ -18,17 +18,22 @@ var SITE = {
 var GH = 'https://github.com/Danlions';
 var P = [
    {
-       t: 'Aplikasi BMR BMI', 
-       s: 'Terminal App', 
-       c: 'Pemrograman Bahasa C', 
-       k: 'GitHub', 
-       img: 'Proyek/Aplikasi BMR BMI.png',
-       d: 'Aplikasi Gizi Yang Menghitung BMR dan BMI Berbasis Terminal.',
-       l: [['Lihat di GitHub', 'https://github.com/Danlions/Aplikasi_BMR_BMI']]
+      t: 'Aplikasi BMR BMI', 
+      s: 'Terminal App', 
+      c: 'Pemrograman Bahasa C', 
+      k: 'GitHub', 
+      img: 'Proyek/Aplikasi BMR BMI.png',
+      d: 'Aplikasi Gizi Yang Menghitung BMR dan BMI Berbasis Terminal Dengan Bahasa C.',
+      l: [['Lihat di GitHub', 'https://github.com/Danlions/Aplikasi_BMR_BMI']]
    },
-  {t:'Kinematika', s:'Arm Manipulator', c:'Robotika', k:'Drive', img:'',
-    d:'Proyek arm manipulator pada mata kuliah Kinematika.',
-    l:[['Buka dokumen','https://drive.google.com/file/d/1MEtLrvR1LaxXN938QOIou0OQD-8u5Hrh/view?usp=drivesdk']]},
+   {
+      t:'Kinematika', 
+      s:'Arm Manipulator', 
+      c:'Robotika', k:'Drive', 
+      img:'Proyek/Arm Manipulator.png',
+      d:'Proyek arm manipulator pada mata kuliah Kinematika.',
+      l:[['Buka dokumen','https://drive.google.com/file/d/1UguEo3sYAD_Tot8RvDvcMIK8npNTgNe_/view?usp=drive_link']]
+   },
   {t:'Sisdig', s:'Dokumentasi Praktikum', c:'Dokumentasi', k:'Drive', img:'',
     d:'Kumpulan dokumentasi praktikum Sistem Digital.',
     l:[['Buka folder Drive','https://drive.google.com/drive/folders/1e7geEjVoufC7uqvQzOLAEBt7qHkQfktK?usp=drive_link']]},
