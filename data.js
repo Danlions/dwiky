@@ -36,7 +36,7 @@ var P = [
       l:[['Google Drive','https://drive.google.com/file/d/1UguEo3sYAD_Tot8RvDvcMIK8npNTgNe_/view?usp=drive_link']]
    },
    {
-      t:'Implementasi Gerbang Logika', 
+      t:'Gerbang Logika', 
       s:'Dokumentasi Praktikum', 
       c:'Sistem Digital', 
       k:'Drive', 
