@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0D1015">
-<title>Dwiky Jerryan Koryanto Muhammad | Mekatronika & Kecerdasan Buatan</title>
+<title>Nama Kamu | Portofolio Mekatronika & Kecerdasan Buatan</title>
 <meta name="description" content="Portofolio pribadi mahasiswa Mekatronika dan Kecerdasan Buatan: robotika, IoT, sistem tertanam, dan desain interaksi.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -125,6 +125,12 @@ button.b{background:none;color:inherit;cursor:pointer}
 .cert:hover{border-color:var(--accent);transform:translateY(-3px)}
 .cert b{font:700 1.1rem/1.3 var(--head)}
 .cert span{color:var(--muted);font-size:15px}
+.filt{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+.filt button{font:500 13px var(--mono);letter-spacing:.04em;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;transition:all .2s}
+.filt button:hover{border-color:var(--accent);color:#fff}
+.filt button.on{background:var(--accent);border-color:var(--accent);color:#06142e}
+.filt button i{font-style:normal;opacity:.65;margin-left:6px}
+div.cert{cursor:default}div.cert:hover{transform:none}
 .cert .th{aspect-ratio:4/3;margin:-18px -18px 14px;border-radius:8px 8px 0 0;overflow:hidden;background:#0A0D12;border-bottom:1px solid var(--line);display:grid;place-items:center}
 .cert .th img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .3s}
 .cert:hover .th img{transform:scale(1.04)}
@@ -291,6 +297,7 @@ dialog::backdrop{background:rgba(3,5,9,.8)}
   <section class="wrap" id="sertifikat">
     <span class="mono">Lembar 04 | Kredensial</span>
     <h2 style="margin-bottom:24px">Sertifikat</h2>
+    <div class="filt" id="filt" role="tablist" aria-label="Filter sertifikat"></div>
     <div class="certs" id="certs"></div>
   </section>
 </main>
@@ -376,11 +383,38 @@ var SKILLS = [
 ];
 
 /* Sertifikat: ganti isi, tambah atau hapus sesuai kebutuhan */
-/* t = judul, s = penerbit, y = tahun, u = link kredensial/PDF (opsional), g = gambar sertifikat (opsional, mis. 'sertifikat/iot.jpg') */
+/* k = kelompok (sesuai nama folder), t = judul, s = penerbit, y = tahun,
+   g = gambar (opsional, mis. 'sertifikat/iot.jpg'), u = link/PDF/verifikasi (opsional).
+   Tanpa g dan u, kartu tampil sebagai teks saja. */
 var CERTS = [
-  {t:'[Nama Sertifikat 1]', s:'[Penerbit]', y:'[Tahun]', u:'#'},
-  {t:'[Nama Sertifikat 2]', s:'[Penerbit]', y:'[Tahun]', u:'#'},
-  {t:'[Nama Sertifikat 3]', s:'[Penerbit]', y:'[Tahun]', u:'#'}
+  {k:'Cognitive Class AI', t:'A Quick Introduction to Machine Learning', s:'Cognitive Class (IBM)', y:'2026'},
+  {k:'Cognitive Class AI', t:'Classification Methods: Problems and Solutions', s:'Cognitive Class (IBM)', y:'2026'},
+  {k:'Cognitive Class AI', t:'Customer Clustering with KMeans', s:'Cognitive Class (IBM)', y:'2026'},
+  {k:'Cognitive Class AI', t:'Data Analysis with Python', s:'Cognitive Class (IBM)', y:'2026'},
+  {k:'Cognitive Class AI', t:'Learning with Python', s:'Cognitive Class (IBM)', y:'2026'},
+  {k:'Cognitive Class AI', t:'Machine Learning Basics', s:'Cognitive Class (IBM)', y:'2026'},
+  {k:'Cognitive Class AI', t:'Precise Predictions: Classification for Flowers', s:'Cognitive Class (IBM)', y:'2026'},
+  {k:'Cognitive Class AI', t:'Predictions: Regression for Car Mileage', s:'Cognitive Class (IBM)', y:'2026'},
+  {k:'Cognitive Class AI', t:'Python 101 for Data Science', s:'Cognitive Class (IBM)', y:'2026'},
+  {k:'Cognitive Class AI', t:'SQL and Relational Databases 101', s:'Cognitive Class (IBM)', y:'2025'},
+  {k:'IBM SkillsBuild', t:'AI Introduction', s:'IBM SkillsBuild', y:'2025'},
+  {k:'IBM SkillsBuild', t:'IBM SkillsBuild Completion Certificate', s:'IBM SkillsBuild', y:'2025'},
+  {k:'IBM SkillsBuild', t:'Getting Started with AI', s:'IBM SkillsBuild', y:'2025'},
+  {k:'IBM SkillsBuild', t:'IBM Granite Models', s:'IBM SkillsBuild', y:'2025'},
+  {k:'IBM SkillsBuild', t:'IBM Granite', s:'IBM SkillsBuild', y:'2025'},
+  {k:'IBM SkillsBuild', t:'IBM Design', s:'IBM SkillsBuild / Credly', y:'2025'},
+  {k:'IBM SkillsBuild', t:'Code Generation and Optimization', s:'IBM SkillsBuild', y:'2025'},
+  {k:'IBM SkillsBuild', t:'Use Generative AI', s:'IBM SkillsBuild', y:'2025'},
+  {k:'Panitia', t:'Isola Sport Fest', s:'Panitia', y:'[Tahun]'},
+  {k:'Panitia', t:'Metastro 2025', s:'Panitia', y:'2025'},
+  {k:'Workshop', t:'AI Class ASEAN', s:'[Penerbit]', y:'2026'},
+  {k:'Workshop', t:'Alibaba', s:'Alibaba', y:'[Tahun]'},
+  {k:'Workshop', t:'[Judul sertifikat Dwiky...sshj]', s:'[Penerbit]', y:'2026'},
+  {k:'Workshop', t:'PPSDM', s:'PPSDM', y:'2025'},
+  {k:'Workshop', t:'SIC6 Stage 1', s:'[Penerbit]', y:'2025'},
+  {k:'Workshop', t:'TOEFL ITP Workshop', s:'Arfiyan Ridwan', y:'2025'},
+  {k:'Workshop', t:'Trisula Suaka', s:'[Penerbit]', y:'2025'},
+  {k:'Workshop', t:'Workshop Matematika', s:'[Penerbit]', y:'[Tahun]'}
 ];
 
 /* ============ KODE (tidak perlu diubah) ============ */
@@ -400,10 +434,27 @@ $('skills').innerHTML = SKILLS.map(function(s){
   return '<div class="skill"><span class="ic">' + inner + '</span><div><b>' + esc(s.n) + '</b><span>' + esc(s.d) + '</span></div></div>';
 }).join('');
 
-$('certs').innerHTML = CERTS.map(function(c, i){
-  var th = c.g ? '<span class="th"><img src="' + esc(c.g) + '" alt="Sertifikat ' + esc(c.t) + '" loading="lazy"></span>' : '';
-  return '<a class="cert" data-i="' + i + '" href="' + esc(c.u || c.g || '#') + '">' + th + '<b>' + esc(c.t) + '</b><span>' + esc(c.s) + '</span><em>' + esc(c.y) + (c.g ? ' | Lihat sertifikat' : ' | Lihat kredensial') + '</em></a>';
-}).join('');
+var certGroup = 'Semua';
+function drawCerts(){
+  var names = ['Semua'];
+  CERTS.forEach(function(c){ if (c.k && names.indexOf(c.k) < 0) names.push(c.k); });
+  $('filt').innerHTML = names.map(function(n){
+    var cnt = n === 'Semua' ? CERTS.length : CERTS.filter(function(c){ return c.k === n; }).length;
+    return '<button type="button" role="tab" aria-selected="' + (n === certGroup) + '" class="' + (n === certGroup ? 'on' : '') + '" data-k="' + esc(n) + '">' + esc(n) + '<i>' + cnt + '</i></button>';
+  }).join('');
+  $('certs').innerHTML = CERTS.map(function(c, i){
+    if (certGroup !== 'Semua' && c.k !== certGroup) return '';
+    var th = c.g ? '<span class="th"><img src="' + esc(c.g) + '" alt="Sertifikat ' + esc(c.t) + '" loading="lazy"></span>' : '';
+    var link = c.u || c.g, tag = link ? 'a' : 'div';
+    var note = c.g ? ' | Lihat sertifikat' : (c.u ? ' | Lihat kredensial' : '');
+    return '<' + tag + ' class="cert" data-i="' + i + '"' + (link ? ' href="' + esc(link) + '"' : '') + '>' + th + '<b>' + esc(c.t) + '</b><span>' + esc(c.s) + '</span><em>' + esc(c.y) + note + '</em></' + tag + '>';
+  }).join('');
+}
+$('filt').addEventListener('click', function(e){
+  var b = e.target.closest('button'); if (!b) return;
+  certGroup = b.getAttribute('data-k'); drawCerts();
+});
+drawCerts();
 
 /* Klik kartu yang punya gambar: buka pembesaran (klik di mana saja / Esc untuk menutup) */
 (function(){
