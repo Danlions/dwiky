@@ -98,9 +98,9 @@ var CERTS = [
 var INFO = [
   {l:'NAMA', v:[SITE.name]},
   {l:'PROGRAM STUDI', v:['Mekatronika &','Kecerdasan Buatan']},
-  {l:'KAMPUS', v:['[Nama Kampus]']},
-  {l:'SEMESTER', v:['[X]']},
-  {l:'FOKUS', v:['Robotika, IoT,','Desain interaksi']},
-  {l:'KOTA', v:['[Kota]']}
+  {l:'KAMPUS', v:['Universitas Pendidikan Indonesia']},
+  {l:'SEMESTER', v:['5']},
+  {l:'FOKUS', v:['Robotika, IoT,','Desain interaksi, Editting']},
+  {l:'KOTA', v:['Bogor']}
 ];
 
