@@ -87,13 +87,13 @@ var CERTS = [
   {k:'IBM SkillsBuild', t:'Use Generative AI', s:'IBM SkillsBuild', y:'2025', f:'Use Generative AI_SkillsBuild.pdf'},
 
   /* ---------- Panitia ---------- */
-  {k:'Panitia', t:'Isola Sport Fest', s:'Panitia', y:'2025', f:'Isola Sport Fest.pdf'},
-  {k:'Panitia', t:'Metastro 2025', s:'Panitia', y:'2025', f:'Metastro 2025.pdf'},
-  {k:'Panitia', t:'Trisula Suaka', s:'Panitia', y:'2025', f:'Trisula Suaka.pdf'},
+  {k:'Panitia', t:'Isola Sport Fest 2025', s:'Panitia ISF', y:'2025', f:'Isola Sport Fest.pdf'},
+  {k:'Panitia', t:'Metastro 2025', s:'Panitia Mestastro', y:'2025', f:'Metastro 2025.pdf'},
+  {k:'Panitia', t:'Trisula Suaka 2025', s:'Panitia Trisula Suaka', y:'2025', f:'Trisula Suaka.pdf'},
 
   /* ---------- Workshop ---------- */
   {k:'Workshop', t:'AI Class ASEAN', s:'Asean Foundation', y:'2026', f:'Ai_Class_Assean.pdf'},
-  {k:'Workshop', t:'Alibaba', s:'Alibaba', y:'2025', f:'Alibaba.pdf'},
+  {k:'Workshop', t:'AI Foward', s:'Alibaba Cloud', y:'2025', f:'Alibaba.pdf'},
   {k:'Workshop', t:'TOEFL Prediction Test', s:'Central Course', y:'2026', f:'Dwiky Jerryan Koryanto Muhammad-sshj.pdf'},
   {k:'Workshop', t:'PPSDM', s:'PPSDM', y:'2025', f:'Sert - PPSDM - Dwiky Jerryan Koryanto Muhammad.pdf'},
   {k:'Workshop', t:'SIC6 Stage 1', s:'Samsung Innovation Campus', y:'2024-2025', f:'Sertifikat SIC6 Stage 1.pdf'},
