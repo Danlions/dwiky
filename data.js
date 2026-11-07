@@ -32,7 +32,7 @@ var P = [
       c:'Hidrolik', 
       k:'Google Drive', 
       img:'Proyek/Arm Manipulator.png',
-      d:'Proyek membuat Arm Manipulator yang bergerak dengan cara kerja hidrolik.',
+      d:'Proyek Arm Manipulator yang bergerak dengan tenaga kerja hidrolik.',
       l:[['Google Drive','https://drive.google.com/file/d/1UguEo3sYAD_Tot8RvDvcMIK8npNTgNe_/view?usp=drive_link']]
    },
    {
@@ -41,7 +41,7 @@ var P = [
       c:'Sistem Digital', 
       k:'Google Drive', 
       img:'Proyek/Sistem Digital.png',
-      d:'Mengimplementasikan cara kerja dari bermacam-macam gerbang logika dengan Decoder dan Encoder',
+      d:'Mengimplementasikan cara kerja dari bermacam-macam gerbang logika dengan Decoder dan Encoder.',
       l:[['Google Drive','https://drive.google.com/file/d/1CeRb-HbjCBvEv0oFfq2O6peWsMQSXubM/view?usp=drive_link']]
    },
    {
@@ -50,11 +50,17 @@ var P = [
       c:'Pemrograman Bahasa Java', 
       k:'GitHub', 
       img:'Proyek/Steam Kendaraan.png',
-      d:'Proyek Steam Kendaraan menggunakan netbeans dan pembuatan ui scene builder serta terintegrasi dengan database MySQL dengan bahasa Java',
-      l:[['GitHub', 'https://github.com/Danlions/SteamKendaraan']]},
-  {t:'Sampah Pintar', s:'Sensor dan Sistem Tertanam', c:'Sistem Tertanam', k:'Drive', img:'',
-    d:'Proyek tempat sampah pintar untuk mata kuliah Sensor dan Sistem Tertanam.',
-    l:[['Buka folder Drive','https://drive.google.com/drive/folders/1YKI4mJZ0up3s3vZdyULtHhqchN5yO9KA']]},
+      d:'Proyek aplikasi Steam Kendaraan menggunakan netbeans dan pembuatan ui scene builder serta terintegrasi dengan database MySQL dengan bahasa Java.',
+      l:[['GitHub', 'https://github.com/Danlions/SteamKendaraan']]
+   },
+   {
+      t:'Sampah Pintar', 
+      s:'Prototipe', 
+      c:'Sensor dan Sistem Tertanam', 
+      k:'Google Drive', 
+      img:'Proyek/Smart Trash Bin.png',
+      d:'Proyek prototipe tempat sampah pintar dengan sensor ultrasonik sebagai tanda sampah penuh dan sensor MQ-135 sebagai tanda kebusukan sampah.',
+      l:[['Google Drive','https://drive.google.com/drive/folders/1gWlqXRRsQeG_LsKE_dB8E441iou95GrS?usp=drive_link']]},
   {t:'Starpoin System', s:'Desain Interaksi', c:'Desain', k:'Figma + Drive', img:'',
     d:'Perancangan antarmuka Starpoin System pada mata kuliah Desain Interaksi, dengan desain di Figma dan dokumentasi di Drive.',
     l:[['Lihat desain Figma','https://www.figma.com/design/ksEbT7dhCwe58sz4lYnQcZ/Untitled?node-id=0-1&p=f'],['Buka folder Drive','https://drive.google.com/drive/folders/10xT1rNW3KkGhcnhw82qRS4fmC0-fWH_c']]},
