@@ -21,7 +21,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);background:rgba(13,16,21,.75);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;gap:26px;height:62px}
 .logo{font:800 1.25rem var(--head);text-decoration:none}
-.nav .l{margin-left:auto;display:flex;gap:22px;font-size:14.5px}
+.nav .l{margin-left:auto;display:flex;align-items:center;gap:22px;font-size:14.5px}
 .nav .l a{text-decoration:none;color:var(--muted)}
 .nav .l a:hover{color:#fff}
 .nav .go{background:#fff;color:#0D1015;text-decoration:none;font-weight:600;font-size:14px;padding:7px 16px;border-radius:99px}
@@ -165,8 +165,7 @@ dialog::backdrop{background:rgba(3,5,9,.8)}
   .tb div:nth-last-child(-n+3){border-bottom:1px solid var(--line)}
   .tb div:nth-last-child(-n+2){border-bottom:0}
   .nav .wrap{height:auto;flex-wrap:wrap;gap:6px 14px;padding-top:10px;padding-bottom:8px}
-  .nav .go{margin-left:auto}
-  .nav .l{order:3;width:100%;margin-left:0;gap:18px;overflow-x:auto;white-space:nowrap;padding-bottom:4px;scrollbar-width:none}
+  .nav .l{order:3;width:100%;margin-left:0;gap:14px;font-size:13.5px;overflow-x:auto;white-space:nowrap;padding-bottom:4px;scrollbar-width:none}
   .nav .l::-webkit-scrollbar{display:none}
 }
 @media (max-width:720px){.grid,.skills{grid-template-columns:repeat(2,1fr)}}
@@ -207,3 +206,9 @@ dialog::backdrop{background:rgba(3,5,9,.8)}
 .lb .lx:hover{border-color:var(--accent)}
 
 [hidden]{display:none!important}
+
+/* Tombol Kontak berwarna putih di menu */
+.nav .l a.go{background:#fff;color:#0D1015;font-weight:600;font-size:14px;padding:7px 18px;border-radius:99px;transition:filter .2s}
+.nav .l a.go:hover{color:#0D1015;filter:brightness(.9)}
+@media (max-width:480px){.nav .l a.go{padding:6px 13px;font-size:13px}}
+@media (max-width:380px){.nav .l{gap:10px;font-size:13px}.nav .l a.go{padding:6px 11px}}
