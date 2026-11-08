@@ -42,6 +42,9 @@ window.addEventListener('error', function(e){
   }
 });
 
+/* Menyiapkan alamat file: spasi dan karakter khusus diubah otomatis */
+function urlFix(s){ s = String(s || ''); return (/%[0-9A-Fa-f]{2}/.test(s) ? s : encodeURI(s)).replace(/'/g, '%27'); }
+
 /* ============ KERANGKA HALAMAN (navigasi, kontak, footer) ============ */
 try { (function(){
   var page = document.body.getAttribute('data-page') || '', title = document.body.getAttribute('data-title');
@@ -49,9 +52,9 @@ try { (function(){
   if (title) document.title = title + ' | ' + SITE.name;
   var links = [['index.html','Beranda','home'],['proyek.html','Proyek','proyek'],['skill.html','Skill','skill'],['sertifikat.html','Sertifikat','sertifikat'],['#kontak','Kontak','']];
   var nav = $('nav');
-  if (nav) nav.innerHTML = '<div class="wrap"><a class="logo" href="index.html">' + esc(words[0]) + '.</a><div class="l">' +
+  if (nav) nav.innerHTML = '<div class="wrap"><a class="logo" href="index.html">' + esc(SITE.logo !== undefined ? SITE.logo : words[0][0].toUpperCase()) + '.</a><div class="l">' +
     links.map(function(l){ return '<a href="' + l[0] + '"' + (l[2] && l[2] === page ? ' class="on" aria-current="page"' : '') + '>' + l[1] + '</a>'; }).join('') +
-    '</div><a class="go" href="#kontak">Hubungi</a></div>';
+    '</div></div>';
   var band = $('kontak');
   if (band) band.innerHTML = '<div class="in"><h2>Mari mengerjakan sesuatu bersama.</h2><p>Terbuka untuk kolaborasi, proyek, dan kesempatan baru. Kirim pesan, saya biasanya membalas dalam 1–2 hari.</p>' +
     '<a class="mail" href="mailto:' + esc(SITE.email) + '">' + esc(SITE.email) + '</a><div class="soc">' +
@@ -60,7 +63,12 @@ try { (function(){
   if (foot) foot.innerHTML = '© ' + new Date().getFullYear() + ' ' + esc(SITE.name);
   var h = $('hName'); if (h) h.textContent = SITE.name;
   var pic = document.querySelector('.pic');
-  if (pic) pic.textContent = (words[0][0] + (words[1] ? words[1][0] : '')).toUpperCase();
+  if (pic){
+    pic.textContent = (words[0][0] + (words[1] ? words[1][0] : '')).toUpperCase();   /* cadangan: inisial bila foto belum ada */
+    var foto = SITE.foto || 'foto.jpg', im = new Image();
+    im.onload = function(){ pic.style.setProperty('--img', "url('" + urlFix(foto) + "')"); pic.textContent = ''; pic.setAttribute('role', 'img'); pic.setAttribute('aria-label', 'Foto ' + clean); };
+    im.src = urlFix(foto);
+  }
   var tz = $('tz');
   if (tz) tz.innerHTML = [
     ['proyek.html', P.length, 'Proyek', 'Robotika, IoT, pemrograman, dan desain interaksi.'],
