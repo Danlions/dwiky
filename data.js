@@ -62,7 +62,7 @@ var P = [
       s:'Prototipe Hardware + Software', 
       c:'Desain Interaksi', 
       k:'Figma + Google Drive',
-      img:'Proyek/Stairpoint',
+      img:'Proyek/Stairpoint.png',
       d:'Proyek prototipe Stairpoint yang terdiri dari sistem scan rfid dengan desain aplikasi android, alat ini memotivasi pengguna untuk lebih menggunakan tangga untuk tujuan kesehatan dengan sistem poin yang bisa ditukar dengan benefit di dalam aplikasi Stairpoint.',
       l:[['Lihat desain Figma','https://www.figma.com/design/ksEbT7dhCwe58sz4lYnQcZ/Untitled?node-id=0-1&p=f'],['Google Drive','https://drive.google.com/drive/folders/1mOqLdpstIWoZsfKHevWyLIrnGOa_aq86?usp=sharing']]},
    {
@@ -70,7 +70,7 @@ var P = [
       s:'Wokwii + Firebase', 
       c:'Internet Of Things', 
       k:'Google Drive', 
-      img:'Proyek/Conveyor Sorting',
+      img:'Proyek/Conveyor Sorting.png',
       d:'Proyek simulasi IoT di Wokwi yang terintegrasi dengan database Firebase, simulasi ini mendeteksi gangguan pada sensor, barang yang macet dan situasi darurat.',
       l:[['Google Drive', 'https://drive.google.com/drive/folders/1AkAfrnCVk52F6jVmTkJFe8bezaL5ry-T?usp=sharing']]},
    {
