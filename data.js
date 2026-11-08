@@ -93,14 +93,30 @@ var P = [
    (python, cplusplus, arduino, wokwi, firebase, figma, git, vscode).
    Kosongkan i untuk memakai singkatan dari m. Hapus yang tidak kamu kuasai, tambahkan yang kamu pakai. */
 var SKILLS = [
-  {n:'Python', d:'Bahasa pemrograman', i:'python', m:'Py'},
-  {n:'C / C++', d:'Bahasa pemrograman', i:'cplusplus', m:'C+'},
-  {n:'Arduino', d:'Mikrokontroler', i:'arduino', m:'Ar'},
-  {n:'Wokwi', d:'Simulasi IoT', i:'wokwi', m:'Wk'},
-  {n:'Firebase', d:'Backend dan database', i:'firebase', m:'Fb'},
-  {n:'Figma', d:'Desain antarmuka', i:'figma', m:'Fg'},
-  {n:'Git & GitHub', d:'Version control', i:'git', m:'Git'},
-  {n:'VS Code', d:'Editor kode', i:'vscode', m:'VS'}
+  /* ---------- Desain & Grafis ---------- */
+  {k:'Desain & Grafis', n:'Figma', d:'Desain antarmuka', i:'figma', m:'Fg'},
+  {k:'Desain & Grafis', n:'Canva', d:'Desain grafis', i:'canva', m:'Cv'},
+  {k:'Desain & Grafis', n:'AutoCAD', d:'Gambar teknik 2D dan 3D', i:'autocad', m:'AC'},
+  {k:'Desain & Grafis', n:'SketchUp', d:'Pemodelan 3D', i:'sketchup', m:'SU'},
+
+  /* ---------- Pengeditan Video & Kreatif ---------- */
+  {k:'Pengeditan Video & Kreatif', n:'Adobe Premiere Pro', d:'Editing video profesional', i:'premiere', m:'Pr'},
+  {k:'Pengeditan Video & Kreatif', n:'CapCut', d:'Editing video', i:'capcut', m:'Cc'},
+  {k:'Pengeditan Video & Kreatif', n:'OBS Studio', d:'Rekaman dan streaming', i:'obs', m:'OBS'},
+
+  /* ---------- Aplikasi Produktivitas ---------- */
+  {k:'Aplikasi Produktivitas', n:'Microsoft Excel', d:'Pengolahan data', i:'excel', m:'Xl'},
+  {k:'Aplikasi Produktivitas', n:'Microsoft Word', d:'Dokumen dan laporan', i:'word', m:'Wd'},
+  {k:'Aplikasi Produktivitas', n:'Microsoft PowerPoint', d:'Presentasi', i:'powerpoint', m:'Pp'},
+
+  /* ---------- Pemrograman & Perangkat Keras ---------- */
+  {k:'Pemrograman & Perangkat Keras', n:'Visual Studio Code (VS Code)', d:'Editor kode', i:'vscode', m:'VS'},
+  {k:'Pemrograman & Perangkat Keras', n:'Arduino IDE', d:'Pemrograman mikrokontroler', i:'arduino', m:'Ar'},
+  {k:'Pemrograman & Perangkat Keras', n:'Python', d:'Bahasa pemrograman', i:'python', m:'Py'},
+  {k:'Pemrograman & Perangkat Keras', n:'C / C++', d:'Bahasa pemrograman', i:'cplusplus', m:'C+'},
+  {k:'Pemrograman & Perangkat Keras', n:'Wokwi', d:'Simulasi IoT', i:'wokwi', m:'Wk'},
+  {k:'Pemrograman & Perangkat Keras', n:'Firebase', d:'Backend dan database', i:'firebase', m:'Fb'},
+  {k:'Pemrograman & Perangkat Keras', n:'Git & GitHub', d:'Version control', i:'git', m:'Git'}
 ];
 
 /* Sertifikat: ganti isi, tambah atau hapus sesuai kebutuhan */
