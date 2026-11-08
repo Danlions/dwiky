@@ -212,3 +212,8 @@ dialog::backdrop{background:rgba(3,5,9,.8)}
 .nav .l a.go:hover{color:#0D1015;filter:brightness(.9)}
 @media (max-width:480px){.nav .l a.go{padding:6px 13px;font-size:13px}}
 @media (max-width:380px){.nav .l{gap:10px;font-size:13px}.nav .l a.go{padding:6px 11px}}
+
+/* Kelompok skill */
+.sg{display:flex;align-items:baseline;gap:10px;margin:34px 0 14px;font:700 1.15rem var(--head);letter-spacing:-.01em}
+.sg:first-child{margin-top:8px}
+.sg i{font:500 12px var(--mono);font-style:normal;color:var(--muted)}
