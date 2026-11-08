@@ -62,6 +62,12 @@ try { (function(){
   var foot = $('foot');
   if (foot) foot.innerHTML = '© ' + new Date().getFullYear() + ' ' + esc(SITE.name);
   var h = $('hName'); if (h) h.textContent = SITE.name;
+  /* Tombol Unduh CV: muncul hanya bila SITE.cv diisi di data.js */
+  var cvb = $('cvBtn');
+  if (cvb && SITE.cv){
+    cvb.href = urlFix(SITE.cv); cvb.hidden = false;
+    cvb.setAttribute('download', SITE.cvNama || ('CV ' + clean + (/\.[a-z0-9]+$/i.test(SITE.cv) ? SITE.cv.slice(SITE.cv.lastIndexOf('.')) : '')));
+  }
   var pic = document.querySelector('.pic');
   if (pic){
     pic.textContent = (words[0][0] + (words[1] ? words[1][0] : '')).toUpperCase();   /* cadangan: inisial bila foto belum ada */
