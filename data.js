@@ -10,6 +10,8 @@ var SITE = {
   email: 'dwikyjerryan311@gmail.com',
   foto: 'Profil.jpg',
   logo: 'DJ',
+  kontakJudul: 'Mari mengerjakan sesuatu bersama.',
+  kontakTeks:  'Terbuka untuk kolaborasi, proyek, dan kesempatan baru.',
   soc: [
     ['GitHub',    'https://github.com/Danlions'],
     ['LinkedIn',  'https://www.linkedin.com/in/dwiky-jerryan-koryanto-muhammad/'],
