@@ -24,7 +24,6 @@ button{font:inherit;color:inherit;cursor:pointer}
 .nav .l{margin-left:auto;display:flex;align-items:center;gap:22px;font-size:14.5px}
 .nav .l a{text-decoration:none;color:var(--muted)}
 .nav .l a:hover{color:#fff}
-.nav .go{background:#fff;color:#0D1015;text-decoration:none;font-weight:600;font-size:14px;padding:7px 16px;border-radius:99px}
 
 /* Tentang */
 .hero{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;padding-top:72px;padding-bottom:70px}
