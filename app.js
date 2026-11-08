@@ -16,7 +16,16 @@ var ICONS = {
   firebase: '<svg viewBox="0 0 24 24"><path fill="#FFA000" d="M5 18 7.2 3.5 10.2 9 12.6 4.6 19 18 12 21.8Z"/><path fill="#FFCA28" d="M5 18 7.2 3.5 10.2 9Z"/><path fill="#F4511E" d="M5 18 12 15.4 19 18 12 21.8Z"/></svg>',
   figma: '<svg viewBox="0 0 24 24"><path fill="#F24E1E" d="M12 3H9a3 3 0 0 0 0 6h3Z"/><path fill="#FF7262" d="M12 3h3a3 3 0 0 1 0 6h-3Z"/><path fill="#A259FF" d="M12 9H9a3 3 0 0 0 0 6h3Z"/><circle cx="15" cy="12" r="3" fill="#1ABCFE"/><path fill="#0ACF83" d="M9 15h3v3a3 3 0 1 1-3-3Z"/></svg>',
   git: '<svg viewBox="0 0 24 24"><rect x="4.4" y="4.4" width="15.2" height="15.2" rx="2.2" transform="rotate(45 12 12)" fill="#F05032"/><path d="M12.2 8.2v7.6M12.2 10.6l3.4 2.6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" fill="none"/><circle cx="12.2" cy="8" r="1.6" fill="#fff"/><circle cx="12.2" cy="16" r="1.6" fill="#fff"/><circle cx="15.8" cy="13.4" r="1.6" fill="#fff"/></svg>',
-  vscode: '<svg viewBox="0 0 24 24"><path fill="#0A7CCF" fill-rule="evenodd" d="M17.5 2.5 21.5 4.4V19.6L17.5 21.5 9.3 13.8 5.2 16.9 3.5 16V8L5.2 7.1 9.3 10.2ZM17.5 7.2 11.8 12 17.5 16.8Z"/></svg>'
+  vscode: '<svg viewBox="0 0 24 24"><path fill="#0A7CCF" fill-rule="evenodd" d="M17.5 2.5 21.5 4.4V19.6L17.5 21.5 9.3 13.8 5.2 16.9 3.5 16V8L5.2 7.1 9.3 10.2ZM17.5 7.2 11.8 12 17.5 16.8Z"/></svg>',
+  canva: '<svg viewBox="0 0 24 24"><defs><linearGradient id="cvg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00C4CC"/><stop offset="1" stop-color="#7D2AE8"/></linearGradient></defs><circle cx="12" cy="12" r="10" fill="url(#cvg)"/><path d="M15.6 9.2A4.6 4.6 0 1 0 15.6 14.8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>',
+  autocad: '<svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="4" fill="#E51050"/><path d="M7 17 12 6.5 17 17M9 13.6h6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  sketchup: '<svg viewBox="0 0 24 24"><path fill="#F05A4A" d="M12 3 20 7.5 12 12 4 7.5Z"/><path fill="#2C7BE5" d="M4 7.5 12 12v9l-8-4.5Z"/><path fill="#1C4E9D" d="M20 7.5 12 12v9l8-4.5Z"/></svg>',
+  premiere: '<svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="4" fill="#00005B"/><text x="12" y="16" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="10.5" fill="#9999FF">Pr</text></svg>',
+  capcut: '<svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="4" fill="#111"/><circle cx="6.8" cy="7.2" r="2" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="6.8" cy="16.8" r="2" fill="none" stroke="#fff" stroke-width="1.6"/><path d="M8.4 8.4 18 16.2M8.4 15.6 18 7.8" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>',
+  obs: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#302E31"/><g fill="none" stroke="#fff" stroke-width="1.5"><ellipse cx="12" cy="12" rx="6.2" ry="2.6"/><ellipse cx="12" cy="12" rx="6.2" ry="2.6" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="6.2" ry="2.6" transform="rotate(120 12 12)"/></g></svg>',
+  excel: '<svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="4" fill="#107C41"/><path d="M8 8l8 8M16 8l-8 8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>',
+  word: '<svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="4" fill="#185ABD"/><path d="M6.5 8 9 16l3-6.5 3 6.5 2.5-8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  powerpoint: '<svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="4" fill="#C43E1C"/><path d="M9 17V7.5h3.4a2.9 2.9 0 0 1 0 5.8H9" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 };
 
 /* ============ PEMERIKSA DATA ============
@@ -53,7 +62,7 @@ try { (function(){
   var links = [['index.html','Beranda','home'],['proyek.html','Proyek','proyek'],['skill.html','Skill','skill'],['sertifikat.html','Sertifikat','sertifikat'],['#kontak','Kontak','']];
   var nav = $('nav');
   if (nav) nav.innerHTML = '<div class="wrap"><a class="logo" href="index.html">' + esc(SITE.logo !== undefined ? SITE.logo : words[0][0].toUpperCase()) + '</a><div class="l">' +
-    links.map(function(l){ return '<a href="' + l[0] + '"' + (l[2] && l[2] === page ? ' class="on" aria-current="page"' : '') + '>' + l[1] + '</a>'; }).join('') +
+    links.map(function(l){ return '<a href="' + l[0] + '"' + (l[0] === '#kontak' ? ' class="go"' : (l[2] && l[2] === page ? ' class="on" aria-current="page"' : '')) + '>' + l[1] + '</a>'; }).join('') +
     '</div></div>';
   var band = $('kontak');
   if (band) band.innerHTML = '<div class="in"><h2>' + esc(SITE.kontakJudul || 'Mari mengerjakan sesuatu bersama.') + '</h2><p>' + esc(SITE.kontakTeks || 'Terbuka untuk kolaborasi, proyek, dan kesempatan baru. Kirim pesan, saya biasanya membalas dalam 1–2 hari.') + '</p>' +
@@ -114,9 +123,18 @@ if ($('grid')) { try {
 
 /* ============ SKILL ============ */
 if ($('skills')) { try {
-  $('skills').innerHTML = SKILLS.map(function(s){
-    var inner = ICONS[s.i] || esc(s.m || s.n.slice(0, 2));
-    return '<div class="skill"><span class="ic">' + inner + '</span><div><b>' + esc(s.n) + '</b><span>' + esc(s.d) + '</span></div></div>';
+  /* Skill dikelompokkan per kategori (k), urutan mengikuti urutan di data.js */
+  var groups = [], gmap = {};
+  SKILLS.forEach(function(s){
+    var k = s.k || 'Lainnya';
+    if (!gmap[k]) { gmap[k] = []; groups.push(k); }
+    gmap[k].push(s);
+  });
+  $('skills').innerHTML = groups.map(function(k){
+    return '<h3 class="sg">' + esc(k) + '<i>' + gmap[k].length + '</i></h3><div class="skills">' + gmap[k].map(function(s){
+      var inner = ICONS[s.i] || esc(s.m || s.n.slice(0, 2));
+      return '<div class="skill"><span class="ic">' + inner + '</span><div><b>' + esc(s.n) + '</b><span>' + esc(s.d) + '</span></div></div>';
+    }).join('') + '</div>';
   }).join('');
 
 } catch (e) { showProblem('skill: ' + e.message); } }
