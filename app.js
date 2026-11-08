@@ -75,7 +75,7 @@ try { (function(){
     '</div></div>';
   var band = $('kontak');
   if (band) band.innerHTML = '<div class="in"><h2>' + esc(SITE.kontakJudul || 'Mari mengerjakan sesuatu bersama.') + '</h2><p>' + esc(SITE.kontakTeks || 'Terbuka untuk kolaborasi, proyek, dan kesempatan baru. Kirim pesan, saya biasanya membalas dalam 1–2 hari.') + '</p>' +
-    '<a class="mail" href="mailto:' + esc(SITE.email) + '">' + esc(SITE.email) + '</a><div class="soc">' +
+    '<div class="soc">' +
     [['Email', 'mailto:' + SITE.email, 'email']].concat(SITE.soc.map(function(s){
       var key = String(s[0]).toLowerCase().replace(/[^a-z]/g, '');
       return [s[0], s[1], SOCICON[key] ? key : 'link'];
