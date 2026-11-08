@@ -8,8 +8,8 @@
 var SITE = {
   name:  'Dwiky Jerryan Koryanto Muhammad',
   email: 'dwikyjerryan311@gmail.com',
-  cv:    'Dokumen/CV.Iky',
-  foto: 'Profil.jpg',
+  cv: 'Dokumen/CV.Iky.pdf',
+  foto: 'Dokumen/Profil.jpg',
   logo: 'DJ',
   kontakJudul: 'Mari mengerjakan sesuatu bersama.',
   kontakTeks:  'Terbuka untuk kolaborasi, proyek, dan kesempatan baru.',
