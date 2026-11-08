@@ -24,8 +24,7 @@ var P = [
       k:'GitHub', 
       img:'Proyek/Aplikasi BMR BMI.png',
       d:'Aplikasi Gizi yang menghitung BMR dan BMI berbasis terminal dengan bahasa C.',
-      l:[['GitHub', 'https://github.com/Danlions/Aplikasi_BMR_BMI']]
-   },
+      l:[['GitHub', 'https://github.com/Danlions/Aplikasi_BMR_BMI']]},
    {
       t:'Arm Manipulator', 
       s:'Prototipe Hardware', 
@@ -33,8 +32,7 @@ var P = [
       k:'Google Drive', 
       img:'Proyek/Arm Manipulator.png',
       d:'Proyek Arm Manipulator yang bergerak dengan tenaga kerja hidrolik.',
-      l:[['Google Drive','https://drive.google.com/file/d/1UguEo3sYAD_Tot8RvDvcMIK8npNTgNe_/view?usp=drive_link']]
-   },
+      l:[['Google Drive','https://drive.google.com/file/d/1UguEo3sYAD_Tot8RvDvcMIK8npNTgNe_/view?usp=drive_link']]},
    {
       t:'Gerbang Logika', 
       s:'Dokumentasi Praktikum', 
@@ -42,8 +40,7 @@ var P = [
       k:'Google Drive', 
       img:'Proyek/Sistem Digital.png',
       d:'Mengimplementasikan cara kerja dari bermacam-macam gerbang logika dengan Decoder dan Encoder.',
-      l:[['Google Drive','https://drive.google.com/file/d/1CeRb-HbjCBvEv0oFfq2O6peWsMQSXubM/view?usp=drive_link']]
-   },
+      l:[['Google Drive','https://drive.google.com/file/d/1CeRb-HbjCBvEv0oFfq2O6peWsMQSXubM/view?usp=drive_link']]},
    {
       t:'Steam Kendaraan', 
       s:'Aplikasi Dekstop', 
@@ -51,8 +48,7 @@ var P = [
       k:'GitHub', 
       img:'Proyek/Steam Kendaraan.png',
       d:'Proyek aplikasi Steam Kendaraan menggunakan netbeans dan pembuatan ui scene builder serta terintegrasi dengan database MySQL dengan bahasa Java.',
-      l:[['GitHub', 'https://github.com/Danlions/SteamKendaraan']]
-   },
+      l:[['GitHub', 'https://github.com/Danlions/SteamKendaraan']]},
    {
       t:'Sampah Pintar', 
       s:'Prototipe Hardware', 
@@ -60,22 +56,31 @@ var P = [
       k:'Google Drive', 
       img:'Proyek/Smart Trash Bin.png',
       d:'Proyek prototipe tempat sampah pintar dengan sensor ultrasonik sebagai tanda sampah penuh dan sensor MQ-135 sebagai tanda kebusukan sampah.',
-      l:[['Google Drive','https://drive.google.com/drive/folders/1gWlqXRRsQeG_LsKE_dB8E441iou95GrS?usp=drive_link']]
-   },
+      l:[['Google Drive','https://drive.google.com/drive/folders/1gWlqXRRsQeG_LsKE_dB8E441iou95GrS?usp=drive_link']]},
    {
       t:'Stairpoint', 
       s:'Prototipe Hardware + Software', 
       c:'Desain Interaksi', 
-      k:'Figma + Drive',
+      k:'Figma + Google Drive',
       img:'Proyek/Stairpoint',
-      d:'Proyek prototipe Stairpoint yang terdiri dari sistem scan rfid dengan desain aplikasi android, alat ini memotivasi pengguna untuk lebih menggunakan tangga untuk tujuan kesehatan dengan sistem poin yang bisa ditukar dengan benefit di dalam aplikasi Stairpoint',
+      d:'Proyek prototipe Stairpoint yang terdiri dari sistem scan rfid dengan desain aplikasi android, alat ini memotivasi pengguna untuk lebih menggunakan tangga untuk tujuan kesehatan dengan sistem poin yang bisa ditukar dengan benefit di dalam aplikasi Stairpoint.',
       l:[['Lihat desain Figma','https://www.figma.com/design/ksEbT7dhCwe58sz4lYnQcZ/Untitled?node-id=0-1&p=f'],['Google Drive','https://drive.google.com/drive/folders/1mOqLdpstIWoZsfKHevWyLIrnGOa_aq86?usp=sharing']]},
-  {t:'IoT Simulasi', s:'Wokwi + Firebase', c:'IoT', k:'GitHub', img:'',
-    d:'Simulasi IoT di Wokwi yang terintegrasi dengan Firebase.',
-    l:[['Lihat di GitHub', GH]]},
-  {t:'Robotika Dobot', s:'Program dan Logika', c:'Robotika', k:'GitHub', img:'',
-    d:'Program dan logika untuk menggerakkan robot Dobot.',
-    l:[['Lihat di GitHub', GH]]}
+   {
+      t:'Simulasi Conveyor Sorting', 
+      s:'Wokwii + Firebase', 
+      c:'Internet Of Things', 
+      k:'Google Drive', 
+      img:'Proyek/Conveyor Sorting',
+      d:'Proyek simulasi IoT di Wokwi yang terintegrasi dengan database Firebase, simulasi ini mendeteksi gangguan pada sensor, barang yang macet dan situasi darurat.',
+      l:[['Google Drive', 'https://drive.google.com/drive/folders/1AkAfrnCVk52F6jVmTkJFe8bezaL5ry-T?usp=sharing']]},
+   {
+      t:'Robotika Dobot', 
+      s:'Program dan Logika', 
+      c:'Robotika', 
+      k:'GitHub', 
+      img:'',
+      d:'Program dan logika untuk menggerakkan robot Dobot.',
+      l:[['Lihat di GitHub', GH]]}
 ];
 
 /* ============ SKILL SOFTWARE ============
