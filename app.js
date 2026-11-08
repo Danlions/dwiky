@@ -52,7 +52,7 @@ try { (function(){
   if (title) document.title = title + ' | ' + SITE.name;
   var links = [['index.html','Beranda','home'],['proyek.html','Proyek','proyek'],['skill.html','Skill','skill'],['sertifikat.html','Sertifikat','sertifikat'],['#kontak','Kontak','']];
   var nav = $('nav');
-  if (nav) nav.innerHTML = '<div class="wrap"><a class="logo" href="index.html">' + esc(SITE.logo !== undefined ? SITE.logo : words[0][0].toUpperCase()) + '.</a><div class="l">' +
+  if (nav) nav.innerHTML = '<div class="wrap"><a class="logo" href="index.html">' + esc(SITE.logo !== undefined ? SITE.logo : words[0][0].toUpperCase()) + '</a><div class="l">' +
     links.map(function(l){ return '<a href="' + l[0] + '"' + (l[2] && l[2] === page ? ' class="on" aria-current="page"' : '') + '>' + l[1] + '</a>'; }).join('') +
     '</div></div>';
   var band = $('kontak');
