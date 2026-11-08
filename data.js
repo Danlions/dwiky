@@ -8,6 +8,7 @@
 var SITE = {
   name:  'Dwiky Jerryan Koryanto Muhammad',
   email: 'dwikyjerryan311@gmail.com',
+  cv:    'CV.Iky',
   foto: 'Profil.jpg',
   logo: 'DJ',
   kontakJudul: 'Mari mengerjakan sesuatu bersama.',
