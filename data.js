@@ -8,6 +8,7 @@
 var SITE = {
   name:  'Dwiky Jerryan Koryanto Muhammad',
   email: 'dwikyjerryan311@gmail.com',
+  logo: 'DJ',
   soc: [
     ['GitHub',    'https://github.com/Danlions'],
     ['LinkedIn',  'https://www.linkedin.com/in/dwiky-jerryan-koryanto-muhammad/'],
