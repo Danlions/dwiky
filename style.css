@@ -28,7 +28,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 
 /* Tentang */
 .hero{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;padding-top:72px;padding-bottom:70px}
-.hero h1{font:800 clamp(3rem,8vw,6.2rem)/.98 var(--head);letter-spacing:-.03em;overflow-wrap:anywhere;margin:12px 0 18px}
+.hero h1{font:800 clamp(1.9rem,4.4vw,3.5rem)/1.08 var(--head);letter-spacing:-.03em;overflow-wrap:anywhere;margin:12px 0 18px}
 .hero .tag{font:500 clamp(1.15rem,2.2vw,1.5rem)/1.35 var(--head);margin:0 0 18px;max-width:20em}
 .hero p.d{color:var(--muted);max-width:36em;margin:0 0 14px}
 .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
