@@ -18,14 +18,14 @@ var ICONS = {
   git: '<svg viewBox="0 0 24 24"><rect x="4.4" y="4.4" width="15.2" height="15.2" rx="2.2" transform="rotate(45 12 12)" fill="#F05032"/><path d="M12.2 8.2v7.6M12.2 10.6l3.4 2.6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" fill="none"/><circle cx="12.2" cy="8" r="1.6" fill="#fff"/><circle cx="12.2" cy="16" r="1.6" fill="#fff"/><circle cx="15.8" cy="13.4" r="1.6" fill="#fff"/></svg>',
   vscode: '<svg viewBox="0 0 24 24"><path fill="#0A7CCF" fill-rule="evenodd" d="M17.5 2.5 21.5 4.4V19.6L17.5 21.5 9.3 13.8 5.2 16.9 3.5 16V8L5.2 7.1 9.3 10.2ZM17.5 7.2 11.8 12 17.5 16.8Z"/></svg>',
   canva: '<svg viewBox="0 0 24 24"><defs><linearGradient id="cvg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00C4CC"/><stop offset="1" stop-color="#7D2AE8"/></linearGradient></defs><circle cx="12" cy="12" r="10" fill="url(#cvg)"/><path d="M15.6 9.2A4.6 4.6 0 1 0 15.6 14.8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>',
-  autocad: '<svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="4" fill="#E51050"/><path d="M7 17 12 6.5 17 17M9 13.6h6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  autocad: '<svg viewBox="0 0 24 24"><rect width="24" height="24" fill="#E51050"/><path d="M5.5 18.5 12 5l6.5 13.5M8.3 14.2h7.4" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
   sketchup: '<svg viewBox="0 0 24 24"><path fill="#F05A4A" d="M12 3 20 7.5 12 12 4 7.5Z"/><path fill="#2C7BE5" d="M4 7.5 12 12v9l-8-4.5Z"/><path fill="#1C4E9D" d="M20 7.5 12 12v9l8-4.5Z"/></svg>',
-  premiere: '<svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="4" fill="#00005B"/><text x="12" y="16" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="10.5" fill="#9999FF">Pr</text></svg>',
-  capcut: '<svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="4" fill="#111"/><circle cx="6.8" cy="7.2" r="2" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="6.8" cy="16.8" r="2" fill="none" stroke="#fff" stroke-width="1.6"/><path d="M8.4 8.4 18 16.2M8.4 15.6 18 7.8" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>',
+  premiere: '<svg viewBox="0 0 24 24"><rect width="24" height="24" fill="#00005B"/><text x="12" y="16.2" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="12.5" fill="#9999FF">Pr</text></svg>',
+  capcut: '<svg viewBox="0 0 24 24"><rect width="24" height="24" fill="#111"/><circle cx="7" cy="7" r="2.4" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="7" cy="17" r="2.4" fill="none" stroke="#fff" stroke-width="1.8"/><path d="M9 8.6 19 16.6M9 15.4 19 7.4" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>',
   obs: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#302E31"/><g fill="none" stroke="#fff" stroke-width="1.5"><ellipse cx="12" cy="12" rx="6.2" ry="2.6"/><ellipse cx="12" cy="12" rx="6.2" ry="2.6" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="6.2" ry="2.6" transform="rotate(120 12 12)"/></g></svg>',
-  excel: '<svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="4" fill="#107C41"/><path d="M8 8l8 8M16 8l-8 8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>',
-  word: '<svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="4" fill="#185ABD"/><path d="M6.5 8 9 16l3-6.5 3 6.5 2.5-8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-  powerpoint: '<svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="4" fill="#C43E1C"/><path d="M9 17V7.5h3.4a2.9 2.9 0 0 1 0 5.8H9" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+  excel: '<svg viewBox="0 0 24 24"><rect width="24" height="24" fill="#107C41"/><path d="M7 7l10 10M17 7 7 17" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/></svg>',
+  word: '<svg viewBox="0 0 24 24"><rect width="24" height="24" fill="#185ABD"/><path d="M5.5 7.5 8.5 17l3.5-7.5L15.5 17l3-9.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  powerpoint: '<svg viewBox="0 0 24 24"><rect width="24" height="24" fill="#C43E1C"/><path d="M8.5 18V6h4.2a3.6 3.6 0 0 1 0 7.2H8.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 };
 
 /* ============ PEMERIKSA DATA ============
@@ -51,6 +51,15 @@ window.addEventListener('error', function(e){
   }
 });
 
+/* Ikon tautan sosial (kontak) */
+var SOCICON = {
+  email: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="m4 8 8 5.8L20 8"/></svg>',
+  linkedin: '<svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="3.5" fill="currentColor"/><g style="fill:var(--t)"><rect x="5.6" y="9.6" width="2.8" height="8.6"/><circle cx="7" cy="6.6" r="1.7"/><path d="M10.4 9.6h2.7v1.3c.5-.9 1.6-1.5 3-1.5 2.5 0 3.1 1.6 3.1 3.8v5h-2.8v-4.4c0-1.2-.3-2-1.4-2-1.2 0-1.8.8-1.8 2.1v4.3h-2.8z"/></g></svg>',
+  github: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.500 11.500 0 0 1 6 0C17.300 4.700 18.300 5 18.300 5c.7 1.700.2 2.900.1 3.200.8.800 1.200 1.900 1.200 3.200 0 4.600-2.800 5.600-5.500 5.900.4.400.8 1.100.8 2.200v3.300c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>',
+  instagram: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>',
+  link: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.700 0l-3 3a4 4 0 0 0 5.700 5.700l1-1"/></svg>'
+};
+
 /* Menyiapkan alamat file: spasi dan karakter khusus diubah otomatis */
 function urlFix(s){ s = String(s || ''); return (/%[0-9A-Fa-f]{2}/.test(s) ? s : encodeURI(s)).replace(/'/g, '%27'); }
 
@@ -67,7 +76,12 @@ try { (function(){
   var band = $('kontak');
   if (band) band.innerHTML = '<div class="in"><h2>' + esc(SITE.kontakJudul || 'Mari mengerjakan sesuatu bersama.') + '</h2><p>' + esc(SITE.kontakTeks || 'Terbuka untuk kolaborasi, proyek, dan kesempatan baru. Kirim pesan, saya biasanya membalas dalam 1–2 hari.') + '</p>' +
     '<a class="mail" href="mailto:' + esc(SITE.email) + '">' + esc(SITE.email) + '</a><div class="soc">' +
-    SITE.soc.map(function(s){ return '<a href="' + esc(s[1]) + '" target="_blank" rel="noopener">' + esc(s[0]) + '</a>'; }).join('') + '</div></div>';
+    [['Email', 'mailto:' + SITE.email, 'email']].concat(SITE.soc.map(function(s){
+      var key = String(s[0]).toLowerCase().replace(/[^a-z]/g, '');
+      return [s[0], s[1], SOCICON[key] ? key : 'link'];
+    })).map(function(s){
+      return '<a href="' + esc(s[1]) + '"' + (s[2] === 'email' ? '' : ' target="_blank" rel="noopener"') + ' aria-label="' + esc(s[0]) + '" title="' + esc(s[0]) + '">' + SOCICON[s[2]] + '</a>';
+    }).join('') + '</div></div>';
   var foot = $('foot');
   if (foot) foot.innerHTML = '© ' + new Date().getFullYear() + ' ' + esc(SITE.name);
   var h = $('hName'); if (h) h.textContent = SITE.name;
@@ -132,8 +146,8 @@ if ($('skills')) { try {
   });
   $('skills').innerHTML = groups.map(function(k){
     return '<h3 class="sg">' + esc(k) + '<i>' + gmap[k].length + '</i></h3><div class="skills">' + gmap[k].map(function(s){
-      var inner = ICONS[s.i] || esc(s.m || s.n.slice(0, 2));
-      return '<div class="skill"><span class="ic">' + inner + '</span><div><b>' + esc(s.n) + '</b><span>' + esc(s.d) + '</span></div></div>';
+      var inner = ICONS[s.i] || esc(s.m || s.n.slice(0, 2)), full = {autocad:1,premiere:1,capcut:1,excel:1,word:1,powerpoint:1}[s.i];
+      return '<div class="skill"><span class="ic' + (full ? ' fill' : '') + '">' + inner + '</span><div><b>' + esc(s.n) + '</b><span>' + esc(s.d) + '</span></div></div>';
     }).join('') + '</div>';
   }).join('');
 
