@@ -56,7 +56,7 @@ try { (function(){
     links.map(function(l){ return '<a href="' + l[0] + '"' + (l[2] && l[2] === page ? ' class="on" aria-current="page"' : '') + '>' + l[1] + '</a>'; }).join('') +
     '</div></div>';
   var band = $('kontak');
-  if (band) band.innerHTML = '<div class="in"><h2>Mari mengerjakan sesuatu bersama.</h2><p>Terbuka untuk kolaborasi, proyek, dan kesempatan baru. Kirim pesan, saya biasanya membalas dalam 1–2 hari.</p>' +
+  if (band) band.innerHTML = '<div class="in"><h2>' + esc(SITE.kontakJudul || 'Mari mengerjakan sesuatu bersama.') + '</h2><p>' + esc(SITE.kontakTeks || 'Terbuka untuk kolaborasi, proyek, dan kesempatan baru. Kirim pesan, saya biasanya membalas dalam 1–2 hari.') + '</p>' +
     '<a class="mail" href="mailto:' + esc(SITE.email) + '">' + esc(SITE.email) + '</a><div class="soc">' +
     SITE.soc.map(function(s){ return '<a href="' + esc(s[1]) + '" target="_blank" rel="noopener">' + esc(s[0]) + '</a>'; }).join('') + '</div></div>';
   var foot = $('foot');
