@@ -61,26 +61,26 @@ var P = [
       t:'Stairpoint', 
       s:'Prototipe Hardware + Software', 
       c:'Desain Interaksi', 
-      k:'Figma + Google Drive',
+      k:'Google Drive + Figma',
       img:'Proyek/Stairpoint.png',
       d:'Proyek prototipe Stairpoint yang terdiri dari sistem scan rfid dengan desain aplikasi android, alat ini memotivasi pengguna untuk lebih menggunakan tangga untuk tujuan kesehatan dengan sistem poin yang bisa ditukar dengan benefit di dalam aplikasi Stairpoint.',
-      l:[['Lihat desain Figma','https://www.figma.com/design/ksEbT7dhCwe58sz4lYnQcZ/Untitled?node-id=0-1&p=f'],['Google Drive','https://drive.google.com/drive/folders/1mOqLdpstIWoZsfKHevWyLIrnGOa_aq86?usp=sharing']]},
+      l:[['Google Drive','https://drive.google.com/drive/folders/1mOqLdpstIWoZsfKHevWyLIrnGOa_aq86?usp=sharing'],['Lihat desain Figma','https://www.figma.com/design/ksEbT7dhCwe58sz4lYnQcZ/Untitled?node-id=0-1&p=f']]},
    {
       t:'Simulasi Conveyor Sorting', 
       s:'Wokwii + Firebase', 
       c:'Internet Of Things', 
-      k:'Google Drive', 
+      k:'Google Drive + Youtube', 
       img:'Proyek/Conveyor Sorting.png',
       d:'Proyek simulasi IoT di Wokwi yang terintegrasi dengan database Firebase, simulasi ini mendeteksi gangguan pada sensor, barang yang macet dan situasi darurat.',
-      l:[['Google Drive', 'https://drive.google.com/drive/folders/1AkAfrnCVk52F6jVmTkJFe8bezaL5ry-T?usp=sharing']]},
+      l:[['Google Drive', 'https://drive.google.com/drive/folders/1AkAfrnCVk52F6jVmTkJFe8bezaL5ry-T?usp=sharing'],['Youtube','https://youtu.be/EnWbhDzTwLU?si=0SNzQVF6LQO50RB0']]},
    {
-      t:'Robotika Dobot', 
+      t:'Dobot Arm Manipulator', 
       s:'Program dan Logika', 
       c:'Robotika', 
-      k:'GitHub', 
-      img:'',
-      d:'Program dan logika untuk menggerakkan robot Dobot.',
-      l:[['Lihat di GitHub', GH]]}
+      k:'Google Drive', 
+      img:'Proyek/Dobot.png',
+      d:'Praktikum menjalankan dengan program dan logika dari aplikasi dobot lab untuk menggerakkan robot dobot dengan blockly dan manual training.',
+      l:[['Google Drive','https://drive.google.com/drive/folders/1sG-1Ixx9NI4PMLl-JJmxsFfLUXx6CqeA?usp=sharing']]}
 ];
 
 /* ============ SKILL SOFTWARE ============
