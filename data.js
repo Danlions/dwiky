@@ -1,10 +1,4 @@
-/* =====================================================================
-   DATA.JS  -  semua isi yang perlu kamu ubah ada di file ini.
-   Simpan, upload ulang ke GitHub, selesai. (Tampilan ada di style.css,
-   logika ada di app.js: tidak perlu disentuh.)
-   ===================================================================== */
-
-/* ============ IDENTITAS & KONTAK ============ */
+/* IDENTITAS & KONTAK */
 var SITE = {
   name:  'Dwiky Jerryan Koryanto Muhammad',
   email: 'dwikyjerryan311@gmail.com',
@@ -88,28 +82,25 @@ var P = [
       l:[['Google Drive','https://drive.google.com/drive/folders/1sG-1Ixx9NI4PMLl-JJmxsFfLUXx6CqeA?usp=sharing']]}
 ];
 
-/* ============ SKILL SOFTWARE ============
-   n = nama, d = keterangan singkat, i = nama ikon dari daftar ICONS di atas
-   (python, cplusplus, arduino, wokwi, firebase, figma, git, vscode).
-   Kosongkan i untuk memakai singkatan dari m. Hapus yang tidak kamu kuasai, tambahkan yang kamu pakai. */
+/* SKILL SOFTWARE */
 var SKILLS = [
-  /* ---------- Desain & Grafis ---------- */
+  /* Desain & Grafis */
   {k:'Desain & Grafis', n:'Figma', d:'Desain antarmuka', i:'figma', m:'Fg'},
   {k:'Desain & Grafis', n:'Canva', d:'Desain grafis', i:'canva', m:'Cv'},
   {k:'Desain & Grafis', n:'AutoCAD', d:'Gambar teknik 2D dan 3D', i:'autocad', m:'AC'},
   {k:'Desain & Grafis', n:'SketchUp', d:'Pemodelan 3D', i:'sketchup', m:'SU'},
 
-  /* ---------- Pengeditan Video & Kreatif ---------- */
+  /* Pengeditan Video & Kreatif */
   {k:'Pengeditan Video & Kreatif', n:'Adobe Premiere Pro', d:'Editing video profesional', i:'premiere', m:'Pr'},
   {k:'Pengeditan Video & Kreatif', n:'CapCut', d:'Editing video', i:'capcut', m:'Cc'},
   {k:'Pengeditan Video & Kreatif', n:'OBS Studio', d:'Rekaman dan streaming', i:'obs', m:'OBS'},
 
-  /* ---------- Aplikasi Produktivitas ---------- */
+  /* Aplikasi Produktivitas */
   {k:'Aplikasi Produktivitas', n:'Microsoft Excel', d:'Pengolahan data', i:'excel', m:'Xl'},
   {k:'Aplikasi Produktivitas', n:'Microsoft Word', d:'Dokumen dan laporan', i:'word', m:'Wd'},
   {k:'Aplikasi Produktivitas', n:'Microsoft PowerPoint', d:'Presentasi', i:'powerpoint', m:'Pp'},
 
-  /* ---------- Pemrograman & Perangkat Keras ---------- */
+  /* Pemrograman & Perangkat Keras */
   {k:'Pemrograman & Perangkat Keras', n:'Visual Studio Code (VS Code)', d:'Editor kode', i:'vscode', m:'VS'},
   {k:'Pemrograman & Perangkat Keras', n:'Arduino IDE', d:'Pemrograman mikrokontroler', i:'arduino', m:'Ar'},
   {k:'Pemrograman & Perangkat Keras', n:'Python', d:'Bahasa pemrograman', i:'python', m:'Py'},
@@ -119,13 +110,8 @@ var SKILLS = [
   {k:'Pemrograman & Perangkat Keras', n:'Git & GitHub', d:'Version control', i:'git', m:'Git'}
 ];
 
-/* Sertifikat: ganti isi, tambah atau hapus sesuai kebutuhan */
-/* k = kelompok, t = judul, s = penerbit, y = tahun
-   f = NAMA FILE di folder Sertifikat (PDF atau JPG/PNG), mis. f:'python-101.pdf'
-   u = link lain (opsional), mis. link verifikasi online
-   Tanpa f dan u, kartu tampil sebagai teks saja. */
 var CERTS = [
-  /* ---------- Cognitive Class AI ---------- */
+  /* Cognitive Class AI */
   {k:'Cognitive Class AI', t:'A Quick Introduction to Machine Learning', s:'Cognitive Class (IBM)', y:'2026', f:'A Quick Introduction to Machine Learning.pdf'},
   {k:'Cognitive Class AI', t:'Classification Methods: Problems and Solutions', s:'Cognitive Class (IBM)', y:'2026', f:'Classification Methods Problems and Solutions.pdf'},
   {k:'Cognitive Class AI', t:'Customer Clustering with KMeans', s:'Cognitive Class (IBM)', y:'2026', f:'Customer Clustering with KMeans to Boost Business Strategy.pdf'},
@@ -137,7 +123,7 @@ var CERTS = [
   {k:'Cognitive Class AI', t:'Python 101 for Data Science', s:'Cognitive Class (IBM)', y:'2026', f:'Python 101 for Data Science.pdf'},
   {k:'Cognitive Class AI', t:'SQL and Relational Databases 101', s:'Cognitive Class (IBM)', y:'2025', f:'SQL and Relational Databases 101.pdf'},
 
-  /* ---------- IBM SkillsBuild ---------- */
+  /* IBM SkillsBuild */
   {k:'IBM SkillsBuild', t:'AI Introduction', s:'IBM SkillsBuild', y:'2025', f:'AI Introduction_Completion Certificate_SkillsBuild.pdf'},
   {k:'IBM SkillsBuild', t:'IBM SkillsBuild Completion Certificate', s:'IBM SkillsBuild', y:'2025', f:'Completion Certificate _ SkillsBuild.pdf'},
   {k:'IBM SkillsBuild', t:'Getting Started with AI', s:'IBM SkillsBuild', y:'2025', f:'Getting Started Ai_Completion Certificate_SkillsBuild.pdf'},
@@ -147,12 +133,12 @@ var CERTS = [
   {k:'IBM SkillsBuild', t:'Code Generation and Optimization', s:'IBM SkillsBuild', y:'2025', f:'Sertifikat Code Generation and Optimization - Wave 3.pdf'},
   {k:'IBM SkillsBuild', t:'Use Generative AI', s:'IBM SkillsBuild', y:'2025', f:'Use Generative AI_SkillsBuild.pdf'},
 
-  /* ---------- Panitia ---------- */
+  /* Panitia */
   {k:'Panitia', t:'Isola Sport Fest 2025', s:'Panitia ISF', y:'2025', f:'Isola Sport Fest.pdf'},
   {k:'Panitia', t:'Metastro 2025', s:'Panitia Mestastro', y:'2025', f:'Metastro 2025.pdf'},
   {k:'Panitia', t:'Trisula Suaka 2025', s:'Panitia Trisula Suaka', y:'2025', f:'Trisula Suaka.pdf'},
 
-  /* ---------- Workshop ---------- */
+  /* Workshop */
   {k:'Workshop', t:'AI Class ASEAN', s:'Asean Foundation', y:'2026', f:'Ai_Class_Assean.pdf'},
   {k:'Workshop', t:'AI Foward', s:'Alibaba Cloud', y:'2025', f:'Alibaba.pdf'},
   {k:'Workshop', t:'TOEFL Prediction Test', s:'Central Course', y:'2026', f:'Dwiky Jerryan Koryanto Muhammad-sshj.pdf'},
@@ -161,8 +147,7 @@ var CERTS = [
   {k:'Workshop', t:'Workshop Matematika', s:'Fakultas Sains dan Matematika Universitas Diponegoro', y:'2025', f:'Workshop Matematika.pdf'}
 ];
 
-/* ============ ISI PAPAN TULIS DOBOT ============ */
-/* Satu kotak per baris. v = baris teks yang ditulis (maksimal 2 baris pendek). */
+/* ISI PAPAN TULIS DOBOT */
 var INFO = [
   {l:'NAMA', v:[SITE.name]},
   {l:'PROGRAM STUDI', v:['Mekatronika & Kecerdasan Buatan']},
