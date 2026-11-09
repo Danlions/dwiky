@@ -1,13 +1,10 @@
-/* =====================================================================
-   APP.JS  -  logika halaman. Tidak perlu diubah.
-   Isi (proyek, skill, sertifikat, kontak) ada di data.js
-   ===================================================================== */
+/* Logika halaman */
 
 var $ = function(id){ return document.getElementById(id); };
 function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
 function two(n){ return (n < 10 ? '0' : '') + n; }
 
-/* Ikon skill: SVG bawaan (tanpa internet), semua dalam kotak 24x24 agar seragam */
+/* Ikon skill: SVG bawaan */
 var ICONS = {
   python: '<svg viewBox="0 0 24 24"><path fill="#3776AB" d="M11.9 2C7.6 2 7.8 3.9 7.8 3.9v2h4.2v.6H6S3 6.2 3 11s2.6 4.6 2.6 4.6H7v-2s-.1-2.7 2.6-2.7h4.6s2.5 0 2.5-2.4V4.5S17.2 2 11.9 2Z"/><circle cx="9.5" cy="4.3" r=".9" fill="#fff"/><path fill="#FFD43B" transform="rotate(180 12 12)" d="M11.9 2C7.6 2 7.8 3.9 7.8 3.9v2h4.2v.6H6S3 6.2 3 11s2.6 4.6 2.6 4.6H7v-2s-.1-2.7 2.6-2.7h4.6s2.5 0 2.5-2.4V4.5S17.2 2 11.9 2Z"/><circle cx="14.5" cy="19.7" r=".9" fill="#fff"/></svg>',
   cplusplus: '<svg viewBox="0 0 24 24"><path fill="#00599C" d="M12 1.6 21.1 6.8v10.4L12 22.4 2.9 17.2V6.8Z"/><path d="M11.8 9.5A3.4 3.4 0 1 0 11.8 14.5" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/><path d="M13.5 12h2.4M14.7 10.8v2.4M16.9 12h2.4M18.1 10.8v2.4" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/></svg>',
@@ -28,9 +25,7 @@ var ICONS = {
   powerpoint: '<svg viewBox="0 0 24 24"><rect width="24" height="24" fill="#C43E1C"/><path d="M8.5 18V6h4.2a3.6 3.6 0 0 1 0 7.2H8.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 };
 
-/* ============ PEMERIKSA DATA ============
-   Kalau data.js rusak (ada bagian yang terhapus / salah tulis), pesan merah muncul di bawah layar
-   dan bagian lain halaman tetap jalan. */
+/* PEMERIKSA DATA */
 function showProblem(msg){
   var b = document.getElementById('problem');
   if (!b){
@@ -60,10 +55,10 @@ var SOCICON = {
   link: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.700 0l-3 3a4 4 0 0 0 5.700 5.700l1-1"/></svg>'
 };
 
-/* Menyiapkan alamat file: spasi dan karakter khusus diubah otomatis */
+/* Alamat file: spasi dan karakter khusus diubah otomatis */
 function urlFix(s){ s = String(s || ''); return (/%[0-9A-Fa-f]{2}/.test(s) ? s : encodeURI(s)).replace(/'/g, '%27'); }
 
-/* ============ KERANGKA HALAMAN (navigasi, kontak, footer) ============ */
+/* KERANGKA HALAMAN (navigasi, kontak, footer) */
 try { (function(){
   var page = document.body.getAttribute('data-page') || '', title = document.body.getAttribute('data-title');
   var clean = SITE.name.replace(/[\[\]]/g, '').trim(), words = clean.split(/\s+/);
@@ -85,7 +80,7 @@ try { (function(){
   var foot = $('foot');
   if (foot) foot.innerHTML = '© ' + new Date().getFullYear() + ' ' + esc(SITE.name);
   var h = $('hName'); if (h) h.textContent = SITE.name;
-  /* Tombol Unduh CV: muncul hanya bila SITE.cv diisi di data.js */
+  /* Tombol Unduh CV */
   var cvb = $('cvBtn');
   if (cvb && SITE.cv){
     cvb.href = urlFix(SITE.cv); cvb.hidden = false;
@@ -93,7 +88,7 @@ try { (function(){
   }
   var pic = document.querySelector('.pic');
   if (pic){
-    pic.textContent = (words[0][0] + (words[1] ? words[1][0] : '')).toUpperCase();   /* cadangan: inisial bila foto belum ada */
+    pic.textContent = (words[0][0] + (words[1] ? words[1][0] : '')).toUpperCase();
     var foto = SITE.foto || 'foto.jpg', im = new Image();
     im.onload = function(){ pic.style.setProperty('--img', "url('" + urlFix(foto) + "')"); pic.textContent = ''; pic.setAttribute('role', 'img'); pic.setAttribute('aria-label', 'Foto ' + clean); };
     im.src = urlFix(foto);
@@ -135,9 +130,8 @@ if ($('grid')) { try {
 
 } catch (e) { showProblem('proyek: ' + e.message); } }
 
-/* ============ SKILL ============ */
+/* SKILL */
 if ($('skills')) { try {
-  /* Skill dikelompokkan per kategori (k), urutan mengikuti urutan di data.js */
   var groups = [], gmap = {};
   SKILLS.forEach(function(s){
     var k = s.k || 'Lainnya';
@@ -153,11 +147,9 @@ if ($('skills')) { try {
 
 } catch (e) { showProblem('skill: ' + e.message); } }
 
-/* ============ SERTIFIKAT ============ */
+/* SERTIFIKAT */
 if ($('certs')) { try {
   var IMG_RE = /\.(jpe?g|png|webp|gif)$/i, PDF_RE = /\.pdf$/i;
-  /* f = nama file di folder SITE.certDir (PDF atau gambar). u = link lain (opsional, mis. verifikasi online). */
-  /* Nama kelompok (k) -> nama folder di GitHub, hanya untuk yang namanya berbeda. Bisa ditimpa lewat SITE.folders di data.js */
   var FOLDERS = {'Cognitive Class AI':'Cognitive Class Ai', 'IBM SkillsBuild':'IBM Skills Build'};
   function certFile(c){
     if (!c.f) return c.g || '';
@@ -191,8 +183,7 @@ if ($('certs')) { try {
   });
   drawCerts();
 
-  /* Pembesaran: gambar atau PDF tampil di atas halaman. Klik latar / tombol X / Esc untuk menutup.
-     Di layar kecil PDF dibuka di tab baru karena browser HP tidak menampilkan PDF di dalam halaman. */
+  /* Pembesaran: gambar atau PDF tampil di atas halaman */
   (function(){
     var lb = document.createElement('div'); lb.className = 'lb';
     lb.innerHTML = '<button type="button" class="lx" aria-label="Tutup">×</button><img alt=""><iframe title="Sertifikat" hidden></iframe><a target="_blank" rel="noopener">Buka di tab baru</a>';
@@ -204,7 +195,7 @@ if ($('certs')) { try {
       var c = CERTS[+a.getAttribute('data-i')]; if (!c) return;
       var f = certFile(c); if (!f) return;
       var isImg = IMG_RE.test(f), isPdf = PDF_RE.test(f);
-      if (isPdf && window.innerWidth < 800) return;          /* HP: biarkan terbuka di tab baru */
+      if (isPdf && window.innerWidth < 800) return;
       if (!isImg && !isPdf) return;
       e.preventDefault();
       im.hidden = !isImg; fr.hidden = !isPdf;
@@ -216,7 +207,7 @@ if ($('certs')) { try {
   })();
 } catch (e) { showProblem('sertifikat: ' + e.message); } }
 
-/* ============ KOORDINAT KURSOR ============ */
+/* KOORDINAT KURSOR */
 if ($('xy')) { try {
   var xy = $('xy');
   window.addEventListener('pointermove', function(e){
@@ -225,7 +216,7 @@ if ($('xy')) { try {
 
 } catch (e) { showProblem('koordinat: ' + e.message); } }
 
-/* ============ DEMO ROBOT DOBOT (beranda) ============ */
+/* DEMO DOBOT */
 if ($('sc')) { try {
   (function(){
     var NS = 'http://www.w3.org/2000/svg', sc = $('sc');
@@ -250,11 +241,9 @@ if ($('sc')) { try {
 
     function el(n, a, p){ var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); (p || sc).appendChild(e); return e; }
 
-    /* Daftar tersembunyi untuk pembaca layar */
     $('info').innerHTML = INFO.map(function(r){ return '<dt>' + esc(r.l) + '</dt><dd>' + esc(r.v.join(' ')) + '</dd>'; }).join('');
 
-    /* Papan tulis: label dan isi dibuat sebagai teks yang "terbuka" oleh klip.
-       Teks yang terlalu panjang otomatis dipecah jadi maksimal 2 baris, lalu dikecilkan bila masih tidak muat. */
+    /* Papan tulis */
     var board = $('board'), pieces = [];
     var MAXW = CW - 22;
     var probe = el('text', {x:0, y:-60, visibility:'hidden'}, sc); probe.setAttribute('class', 'val');
@@ -299,7 +288,7 @@ if ($('sc')) { try {
     function measure(){ pieces.forEach(function(p){ try { p.w = Math.ceil(p.t.getComputedTextLength()) + 4; } catch (e) {} }); }
 
     var cur = HOME.slice();
-    /* cur = titik pasang pena. Alas Dobot di rel atas ikut bergeser, lengan dua ruas (elbow) turun ke pena. */
+    /* Pen */
     var SY = 66, L1 = 120, L2 = 135;
     function elbow(sx, wx, wy){
       var dx = wx - sx, dy = wy - SY, d = Math.min(Math.hypot(dx, dy), L1 + L2 - 2);
@@ -405,13 +394,13 @@ if ($('sc')) { try {
 
 } catch (e) { showProblem('demo Dobot: ' + e.message); } }
 
-/* ============ EFEK CAHAYA KURSOR ============ */
+/* EFEK CAHAYA KURSOR */
 (function(){
   var g = document.getElementById('glow'), gl = document.getElementById('gridlit');
   if (!g || !window.matchMedia('(hover:hover)').matches) return;
   var tx = 0, ty = 0, x = 0, y = 0, raf = 0;
   function loop(){
-    x += (tx - x) * .6; y += (ty - y) * .6;   /* 0.6 = hampir langsung; naikkan ke 1 untuk persis */
+    x += (tx - x) * .6; y += (ty - y) * .6;
     g.style.transform = 'translate(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px)';
     gl.style.setProperty('--gx', x.toFixed(1) + 'px'); gl.style.setProperty('--gy', y.toFixed(1) + 'px');
     raf = (Math.abs(tx - x) + Math.abs(ty - y) > .3) ? requestAnimationFrame(loop) : 0;
