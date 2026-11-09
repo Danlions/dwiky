@@ -1,4 +1,4 @@
-/* Warna dibuat netral; biru hanya dipakai sebagai aksen. Ubah di sini */
+/* Warna */
 :root{
   --bg:#0D1015; --panel:#151A22; --panel2:#1B212B; --line:rgba(255,255,255,.12);
   --ink:#F3F5F9; --muted:#9BA3B4; --accent:#6E9BFF;
@@ -72,7 +72,7 @@ h2{font:800 clamp(2.1rem,5vw,3.4rem)/1 var(--head);letter-spacing:-.03em;margin:
 
 button.b{background:none;color:inherit;cursor:pointer}
 
-/* Demo robot */
+/* Dobot */
 .demo{display:grid;grid-template-columns:1.05fr .95fr;gap:16px;align-items:stretch}
 .scene{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px;display:flex}
 .scene svg{display:block;width:100%;height:auto;align-self:center}
@@ -127,7 +127,7 @@ div.cert{cursor:default}div.cert:hover{transform:none}
 .lb a{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);color:#fff;font:500 13px var(--mono);letter-spacing:.08em;text-decoration:underline}
 .cert em{font:500 12px var(--mono);font-style:normal;color:var(--accent);margin-top:10px;letter-spacing:.08em}
 
-/* Kontak: satu-satunya blok gradien biru */
+/* Kontak */
 .band{margin:100px auto 0;max-width:1120px;padding:0 24px}
 .band .in{border-radius:20px;background:var(--grad);padding:64px 32px;text-align:center}
 .band h2{margin:0 auto 12px;max-width:14em;font-size:clamp(1.75rem,7vw,3.4rem);overflow-wrap:anywhere;hyphens:auto}
@@ -171,7 +171,7 @@ dialog::backdrop{background:rgba(3,5,9,.8)}
 @media (max-width:480px){.grid,.skills{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
 
-/* Efek cahaya mengikuti kursor */
+/* Efek hover cahaya */
 .glow{position:fixed;left:0;top:0;width:280px;height:280px;margin:-140px 0 0 -140px;border-radius:50%;pointer-events:none;z-index:0;opacity:0;transition:opacity .2s;background:radial-gradient(circle,rgba(79,134,255,.22),rgba(47,107,255,.06) 50%,transparent 70%);will-change:transform}
 .glow.on{opacity:1}
 .gridlit{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:0;transition:opacity .2s;background-image:linear-gradient(rgba(130,170,255,.28) 1px,transparent 1px),linear-gradient(90deg,rgba(130,170,255,.28) 1px,transparent 1px);background-size:48px 48px;-webkit-mask-image:radial-gradient(circle 150px at var(--gx,50%) var(--gy,50%),#000,transparent);mask-image:radial-gradient(circle 150px at var(--gx,50%) var(--gy,50%),#000,transparent)}
@@ -196,7 +196,7 @@ dialog::backdrop{background:rgba(3,5,9,.8)}
 .tz em{font:500 12px var(--mono);font-style:normal;color:var(--accent);margin-top:12px;letter-spacing:.08em}
 @media (max-width:720px){.tzs{grid-template-columns:1fr}}
 
-/* Pratinjau sertifikat PDF / gambar */
+/* Pratinjau sertifikat PDF */
 .cert .th.pdf{aspect-ratio:4/2.2;background:linear-gradient(135deg,#1B212B,#12161D)}
 .cert .th.pdf b{font:700 1.3rem var(--mono);letter-spacing:.2em;color:var(--accent);border:1.5px solid var(--accent);padding:6px 14px;border-radius:6px;margin:0}
 .lb iframe{width:min(960px,100%);height:86vh;border:0;border-radius:8px;background:#fff;box-shadow:0 20px 60px rgba(0,0,0,.6)}
@@ -206,7 +206,7 @@ dialog::backdrop{background:rgba(3,5,9,.8)}
 
 [hidden]{display:none!important}
 
-/* Tombol Kontak berwarna putih di menu */
+/* Tombol Kontak */
 .nav .l a.go{background:transparent;color:var(--ink);border:1px solid var(--line);font-weight:600;font-size:14px;padding:7px 18px;border-radius:99px;transition:border-color .2s,color .2s}
 .nav .l a.go:hover{color:#fff;border-color:var(--accent)}
 @media (max-width:480px){.nav .l a.go{padding:6px 13px;font-size:13px}}
@@ -217,10 +217,10 @@ dialog::backdrop{background:rgba(3,5,9,.8)}
 .sg:first-child{margin-top:8px}
 .sg i{font:500 12px var(--mono);font-style:normal;color:var(--muted)}
 
-/* Ikon aplikasi berwarna memenuhi kotak */
+/* Ikon aplikasi */
 .ic.fill{background:none}
 .ic.fill svg{width:100%;height:100%}
-/* Ikon sosial di bagian kontak */
+/* Ikon sosial */
 .soc{gap:14px}
 .soc a{--t:#1B212B;width:52px;height:52px;border-radius:13px;display:grid;place-items:center;background:#1B212B;border:1px solid rgba(255,255,255,.14);color:#D5DAE4;text-decoration:none;transition:background .2s,color .2s,transform .2s,--t .2s}
 .soc a svg{width:24px;height:24px;display:block}
